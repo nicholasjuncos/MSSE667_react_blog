@@ -48,6 +48,15 @@ public class User {
         this.password = password;
     }
 
+    public void updateInfo(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public void updatePassword(String password) {
+        this.password = password;
+    }
+
     public String get_id() {
         return _id;
     }

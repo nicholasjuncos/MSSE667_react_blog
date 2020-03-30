@@ -26,7 +26,7 @@ interface PostService {
     Post findBy_idAndPublishedIsTrueAndPostDateLessThanEqual(String _id);
     Post findBy_idAndAuthorUsername(String _id, String username);
 
-    Post create(PostRequest postRequest);
+    Post create(PostRequest postRequest, String username);
     Post update(PostUpdateRequest postRequest, String _id, String user_id);
     Post delete(String _id,  String user_id);
 

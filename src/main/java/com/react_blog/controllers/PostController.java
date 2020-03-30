@@ -36,8 +36,9 @@ public class PostController {
 
     @PostMapping("/")
     @PreAuthorize("hasRole('User')")
-    public ResponseEntity<?> createPost(@RequestBody @Valid PostRequest postRequest) {
-        return ResponseEntity.ok(service.create(postRequest));
+    public ResponseEntity<?> createPost(@RequestHeader Map<String, String> headers, @RequestBody @Valid PostRequest postRequest) {
+        String username = jwtUtils.getLoggedInUser(headers);
+        return ResponseEntity.ok(service.create(postRequest, username));
     }
 
     @GetMapping("/?title_contains={title}")

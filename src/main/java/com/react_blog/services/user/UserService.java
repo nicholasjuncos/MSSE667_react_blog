@@ -8,7 +8,7 @@ interface UserService {
     List<User> findAll();
     User findByUsername(String username);
     User findBy_id(String _id);
-    User delete(String _id);
-    User updateInfo(User user);
-    User updatePassword(User user);
+    User delete(String username);
+    User updateInfo(User user, String username);
+    User updatePassword(User user, String username);
 }

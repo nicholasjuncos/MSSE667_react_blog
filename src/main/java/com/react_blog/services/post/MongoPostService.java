@@ -1,9 +1,11 @@
 package com.react_blog.services.post;
 
 import com.react_blog.models.Post;
+import com.react_blog.models.User;
 import com.react_blog.payload.request.PostRequest;
 import com.react_blog.payload.request.PostUpdateRequest;
 import com.react_blog.repositories.PostRepository;
+import com.react_blog.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
@@ -16,9 +18,10 @@ import java.util.Optional;
 public class MongoPostService implements PostService {
 
     private final PostRepository repository;
+    private final UserRepository userRepository;
 
     @Autowired
-    MongoPostService(PostRepository repository) { this.repository = repository; }
+    MongoPostService(PostRepository repository, UserRepository userRepository) { this.repository = repository; this.userRepository = userRepository; }
 
     @Override
     public List<Post> findAll() {
@@ -73,8 +76,10 @@ public class MongoPostService implements PostService {
     }
 
     @Override
-    public Post create(PostRequest postRequest) {
-        Post post = new Post(postRequest.getAuthor(), postRequest.getPublished(), postRequest.getPostDate(),
+    public Post create(PostRequest postRequest, String username) {
+        Optional<User> result = userRepository.findByUsername(username);
+        User user = result.orElseThrow(() -> new AuthenticationException("User with username: " + username + " not found") {});
+        Post post = new Post(user, postRequest.getPublished(), postRequest.getPostDate(),
                 postRequest.getTitle(), postRequest.getTitle2(), postRequest.getSubtitle1(),
                 postRequest.getDescription1(), postRequest.getSubtitle2(), postRequest.getDescription2(),
                 postRequest.getSubtitle3(), postRequest.getDescription3(), postRequest.getQuote1(),

@@ -30,8 +30,8 @@ public class MongoUserService implements UserService {
     }
 
     @Override
-    public User delete(String _id) {
-        User deleted = findUserBy_id(_id);
+    public User delete(String username) {
+        User deleted = findUserByUsername(username);
         repository.delete(deleted);
         return deleted;
     }
@@ -47,16 +47,16 @@ public class MongoUserService implements UserService {
     }
 
     @Override
-    public User updateInfo(User user) {
-        User updated = findUserBy_id(user.get_id());
+    public User updateInfo(User user, String username) {
+        User updated = findUserByUsername(username);
         updated.updateInfo(user.getFirstName(), user.getLastName());
         updated = repository.save(updated);
         return updated;
     }
 
     @Override
-    public User updatePassword(User user) {
-        User updated = findUserBy_id(user.get_id());
+    public User updatePassword(User user, String username) {
+        User updated = findUserByUsername(username);
         updated.updatePassword(encoder.encode(user.getPassword()));
         updated = repository.save(updated);
         return updated;

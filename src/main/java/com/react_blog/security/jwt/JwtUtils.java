@@ -65,6 +65,9 @@ public class JwtUtils {
 
     public String getLoggedInUser(Map<String, String> headers) {
         String headerAuth = headers.get("Authorization");
+        if (headerAuth == null) {
+            headerAuth = headers.get("authorization");
+        }
         if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
             headerAuth = headerAuth.substring(7, headerAuth.length());
         } else {

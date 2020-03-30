@@ -38,14 +38,14 @@ class MenuComponent extends Component {
         return (
             <nav className="navbar navbar-expand navbar-dark bg-dark">
                 <Link to={"/"} className="navbar-brand">
-                    bezKoder
+                    ReactBlog
                 </Link>
                 <div className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <Link to={"/home"} className="nav-link">
-                            Home
-                        </Link>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <Link to={"/home"} className="nav-link">*/}
+                    {/*        Home*/}
+                    {/*    </Link>*/}
+                    {/*</li>*/}
 
                     {showModeratorBoard && (
                         <li className="nav-item">

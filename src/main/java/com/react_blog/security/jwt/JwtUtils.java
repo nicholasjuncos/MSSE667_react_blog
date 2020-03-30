@@ -1,17 +1,25 @@
 package com.react_blog.security.jwt;
 
 import com.react_blog.security.services.UserDetailsImpl;
+import com.react_blog.security.services.UserDetailsServiceImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
+import java.util.Map;
 
 @Component
 public class JwtUtils {
+
+    @Autowired
+    private UserDetailsServiceImpl userDetailsService;
+
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
     @Value("${react_blog.app.jwtSecret}")
@@ -53,5 +61,18 @@ public class JwtUtils {
         }
 
         return false;
+    }
+
+    public String getLoggedInUser(Map<String, String> headers) {
+        String headerAuth = headers.get("Authorization");
+        if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
+            headerAuth = headerAuth.substring(7, headerAuth.length());
+        } else {
+            headerAuth = null;
+        }
+        if (headerAuth != null && validateJwtToken(headerAuth)) {
+            return getUserNameFromJwtToken(headerAuth);
+        }
+        return null;
     }
 }

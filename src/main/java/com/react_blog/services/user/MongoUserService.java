@@ -1,4 +1,4 @@
-package com.react_blog.services;
+package com.react_blog.services.user;
 
 import com.react_blog.models.User;
 import com.react_blog.repositories.UserRepository;

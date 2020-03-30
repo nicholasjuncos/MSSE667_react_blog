@@ -2,9 +2,10 @@ package com.react_blog.controllers;
 
 import com.react_blog.models.User;
 import com.react_blog.repositories.UserRepository;
-import com.react_blog.services.MongoUserService;
+import com.react_blog.services.user.MongoUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -39,16 +40,19 @@ public class UserController {
     }
 
     @DeleteMapping("/{_id}")
+    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<?> delete(@PathVariable("_id") String _id) {
         return ResponseEntity.ok(service.delete(_id));
     }
 
     @PutMapping("/{_id}/info/")
+    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<?> updateUserInfo(@RequestBody @Valid User user) {
             return ResponseEntity.ok(service.updateInfo(user));
     }
 
     @PutMapping("/{_id}/password/")
+    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<?> updateUserPassword(@RequestBody @Valid User user) {
         return ResponseEntity.ok(service.updatePassword(user));
     }

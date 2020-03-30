@@ -1,67 +1,64 @@
-package com.react_blog.models;
+package com.react_blog.payload.request;
 
-import org.springframework.data.annotation.Id;
-
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
-public class Post {
-    @Id
-    private String _id;
-    private User author;
+public class PostUpdateRequest {
+    @NotBlank
     private Boolean published;
+
+    @NotBlank
     private Date postDate;
+
+    @NotBlank
+    @Size(max = 50)
     private String title;
+
+    @Size(max = 50)
     private String title2;
+
+    @NotBlank
+    @Size(max = 50)
     private String subtitle1;
+
+    @NotBlank
+    @Size(max = 1000)
     private String description1;
+
+    @Size(max = 50)
     private String subtitle2;
+
+    @Size(max = 1000)
     private String description2;
+
+    @Size(max = 50)
     private String subtitle3;
+
+    @Size(max = 1000)
     private String description3;
+
+    @Size(max = 500)
     private String quote1;
+
+    @Size(max = 100)
     private String quoter1;
+
+    @Size(max = 500)
     private String quote2;
+
+    @Size(max = 100)
     private String quoter2;
+
+    @Size(max = 500)
     private String category;
-    private Integer likeCount;
-//    private Image coverImg;
+
+//    private Integer likeCount;
+
+    //    private Image coverImg;
 //    private Image image1;
 //    private Image image2;
 //    private Image image3;
-
-    public Post(User author, Boolean published, Date postDate, String title, String title2, String subtitle1,
-                String description1, String subtitle2, String description2, String subtitle3, String description3,
-                String quote1, String quoter1, String quote2, String quoter2, String category, Integer likeCount) {
-        this.author = author;
-        this.published = published;
-        this.postDate = postDate;
-        this.title = title;
-        this.title2 = title2;
-        this.subtitle1 = subtitle1;
-        this.description1 = description1;
-        this.subtitle2 = subtitle2;
-        this.description2 = description2;
-        this.subtitle3 = subtitle3;
-        this.description3 = description3;
-        this.quote1 = quote1;
-        this.quoter1 = quoter1;
-        this.quote2 = quote2;
-        this.quoter2 = quoter2;
-        this.category = category;
-        this.likeCount = likeCount;
-    }
-
-    public String get_id() {
-        return _id;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(User author) {
-        this.author = author;
-    }
 
     public Boolean getPublished() {
         return published;
@@ -183,31 +180,12 @@ public class Post {
         this.category = category;
     }
 
-    public Integer getLikeCount() {
-        return likeCount;
-    }
+//    public Integer getLikeCount() {
+//        return likeCount;
+//    }
+//
+//    public void setLikeCount(Integer likeCount) {
+//        this.likeCount = likeCount;
+//    }
 
-    public void setLikeCount(Integer likeCount) {
-        this.likeCount = likeCount;
-    }
-
-    public void update(Boolean published, Date postDate, String title, String title2, String subtitle1,
-           String description1, String subtitle2, String description2, String subtitle3, String description3,
-           String quote1, String quoter1, String quote2, String quoter2, String category) {
-        this.published = published;
-        this.postDate = postDate;
-        this.title = title;
-        this.title2 = title2;
-        this.subtitle1 = subtitle1;
-        this.description1 = description1;
-        this.subtitle2 = subtitle2;
-        this.description2 = description2;
-        this.subtitle3 = subtitle3;
-        this.description3 = description3;
-        this.quote1 = quote1;
-        this.quoter1 = quoter1;
-        this.quote2 = quote2;
-        this.quoter2 = quoter2;
-        this.category = category;
-    }
 }

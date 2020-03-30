@@ -65,13 +65,13 @@ public class Post {
         this.title = title;
     }
 
-//    public String getTitle2() {
-//        return title2;
-//    }
-//
-//    public void setTitle2(String title2) {
-//        this.title2 = title2;
-//    }
+    public String getTitle2() {
+        return title2;
+    }
+
+    public void setTitle2(String title2) {
+        this.title2 = title2;
+    }
 
     public String getSubtitle1() {
         return subtitle1;

@@ -1,25 +1,106 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import AuthenticationService from '../service/AuthenticationService';
+import AuthService from "../services/auth/auth.service";
+
 
 class MenuComponent extends Component {
 
+    constructor(props) {
+        super(props);
+        this.logOut = this.logOut.bind(this);
+
+        this.state = {
+            showModeratorBoard: false,
+            showAdminBoard: false,
+            currentUser: undefined
+        };
+    }
+
+    componentDidMount() {
+        const user = AuthService.getCurrentUser();
+
+        if (user) {
+            this.setState({
+                currentUser: AuthService.getCurrentUser(),
+                showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
+                showAdminBoard: user.roles.includes("ROLE_ADMIN")
+            });
+        }
+    }
+
+    logOut() {
+        AuthService.logout();
+    }
+
     render() {
-        const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
+        const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
         return (
-            <header>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="http://www.in28minutes.com" className="navbar-brand">in28Minutes</a></div>
-                    <ul className="navbar-nav">
-                        <li><Link className="nav-link" to="/courses">Courses</Link></li>
-                    </ul>
-                    <ul className="navbar-nav navbar-collapse justify-content-end">
-                        {!isUserLoggedIn && <li><Link className="nav-link" to="/login">Login</Link></li>}
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/logout" onClick={AuthenticationService.logout}>Logout</Link></li>}
-                    </ul>
-                </nav>
-            </header>
+            <nav className="navbar navbar-expand navbar-dark bg-dark">
+                <Link to={"/"} className="navbar-brand">
+                    bezKoder
+                </Link>
+                <div className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <Link to={"/home"} className="nav-link">
+                            Home
+                        </Link>
+                    </li>
+
+                    {showModeratorBoard && (
+                        <li className="nav-item">
+                            <Link to={"/mod"} className="nav-link">
+                                Moderator Board
+                            </Link>
+                        </li>
+                    )}
+
+                    {showAdminBoard && (
+                        <li className="nav-item">
+                            <Link to={"/admin"} className="nav-link">
+                                Admin Board
+                            </Link>
+                        </li>
+                    )}
+
+                    {currentUser && (
+                        <li className="nav-item">
+                            <Link to={"/user"} className="nav-link">
+                                User
+                            </Link>
+                        </li>
+                    )}
+                </div>
+
+                {currentUser ? (
+                    <div className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <Link to={"/profile"} className="nav-link">
+                                {currentUser.username}
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/login" className="nav-link" onClick={this.logOut}>
+                                LogOut
+                            </a>
+                        </li>
+                    </div>
+                ) : (
+                    <div className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <Link to={"/login"} className="nav-link">
+                                Login
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to={"/register"} className="nav-link">
+                                Sign Up
+                            </Link>
+                        </li>
+                    </div>
+                )}
+            </nav>
         )
     }
 }

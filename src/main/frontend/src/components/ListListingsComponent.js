@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ListingsDataService from "../service/ListingsDataService";
+import ListingsDataService from "../services/ListingsDataService";
 import Pagination from 'react-bootstrap/Pagination';
 
 class ListListingsComponent extends Component {

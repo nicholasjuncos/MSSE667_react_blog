@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import UserService from "../services/user.service";
+import UserService from "../../services/user.service";
 
-class HomePage extends Component {
-
+export default class BoardModerator extends Component {
     constructor(props) {
         super(props);
 
@@ -13,7 +12,7 @@ class HomePage extends Component {
     }
 
     componentDidMount() {
-        UserService.getPublicContent().then(
+        UserService.getModeratorBoard().then(
             response => {
                 this.setState({
                     content: response.data
@@ -22,7 +21,9 @@ class HomePage extends Component {
             error => {
                 this.setState({
                     content:
-                        (error.response && error.response.data) ||
+                        (error.response &&
+                            error.response.data &&
+                            error.response.data.message) ||
                         error.message ||
                         error.toString()
                 });
@@ -37,8 +38,6 @@ class HomePage extends Component {
                     <h3>{this.state.content}</h3>
                 </header>
             </div>
-        )
+        );
     }
 }
-
-export default HomePage;

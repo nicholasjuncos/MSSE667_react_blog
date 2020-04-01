@@ -1,7 +1,7 @@
 import PostService from "../../services/post.service";
 import React, {Component} from "react";
 import AuthService from "../../services/auth/auth.service";
-import Redirect from "react-router-dom/es/Redirect";
+import { Redirect } from "react-router-dom";
 
 export default class PostDetailComponent extends Component {
     constructor(props) {

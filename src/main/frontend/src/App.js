@@ -21,7 +21,7 @@ function App() {
                       <Route exact path="/login" component={LoginPage} />
                       <Route exact path="/register" component={RegisterPage} />
                       <AuthenticatedRoute exact path="/profile" component={ProfilePage} />
-                      <Route path="/profile/:id" component={ProfilePage} />
+                      <Route path="/profile/:username" component={ProfilePage} />
                       <AuthenticatedRoute path="/my/posts/:id" component={PostDetailPage}/>
                       <Route path="/posts/:id" component={PostDetailPage}/>
                       {/*<Route path="/user" component={BoardUser} />*/}

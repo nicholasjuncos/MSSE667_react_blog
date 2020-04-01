@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AuthService from "../../services/auth/auth.service";
+import ListPostsComponent from "../../components/posts/ListPostsComponent";
 
 export default class Profile extends Component {
     constructor(props) {
@@ -20,15 +21,15 @@ export default class Profile extends Component {
                         <strong>{currentUser.username}</strong> Profile
                     </h3>
                 </header>
-                <p>
-                    <strong>Token:</strong>{" "}
-                    {currentUser.accessToken.substring(0, 20)} ...{" "}
-                    {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
-                </p>
-                <p>
-                    <strong>Id:</strong>{" "}
-                    {currentUser._id}
-                </p>
+                {/*<p>*/}
+                {/*    <strong>Token:</strong>{" "}*/}
+                {/*    {currentUser.accessToken.substring(0, 20)} ...{" "}*/}
+                {/*    {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}*/}
+                {/*</p>*/}
+                {/*<p>*/}
+                {/*    <strong>Id:</strong>{" "}*/}
+                {/*    {currentUser._id}*/}
+                {/*</p>*/}
                 <p>
                     <strong>Name:</strong>{" "}
                     {currentUser.firstName} {currentUser.lastName}
@@ -37,11 +38,14 @@ export default class Profile extends Component {
                     <strong>Email:</strong>{" "}
                     {currentUser.email}
                 </p>
-                <strong>Authorities:</strong>
-                <ul>
-                    {currentUser.roles &&
-                    currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-                </ul>
+                {/*<strong>Authorities:</strong>*/}
+                {/*<ul>*/}
+                {/*    {currentUser.roles &&*/}
+                {/*    currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}*/}
+                {/*</ul>*/}
+                <header className="jumbotron">
+                    <ListPostsComponent postUrl='my/posts/' title='My Posts' isUser='true' detailsUrl='/my/posts/'/>
+                </header>
             </div>
         );
     }

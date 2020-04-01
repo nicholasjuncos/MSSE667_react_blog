@@ -11,10 +11,10 @@ import java.util.Optional;
 @RepositoryRestResource(collectionResourceRel = "posts", path = "posts")
 public interface PostRepository extends MongoRepository<Post, String>  {
 
-    List<Post> findByTitleContainsAndPublishedIsTrueAndPostDateLessThanEqual(String title, Date searchDate);
-    List<Post> findByPublishedIsTrueAndPostDateLessThanEqual(Date searchDate);
-    List<Post> findByPublishedIsTrueAndPostDateLessThanEqualAndAuthorUsername(Date searchDate, String username);
-    List<Post> findByAuthorUsername(String username);
+    List<Post> findByTitleContainsAndPublishedIsTrueAndPostDateLessThanEqualOrderByPostDateDesc(String title, Date searchDate);
+    List<Post> findByPublishedIsTrueAndPostDateLessThanEqualOrderByPostDateDesc(Date searchDate);
+    List<Post> findByPublishedIsTrueAndPostDateLessThanEqualAndAuthorUsernameOrderByPostDateDesc(Date searchDate, String username);
+    List<Post> findByAuthorUsernameOrderByPostDateDesc(String username);
     Optional<Post> findBy_idAndPublishedIsTrueAndPostDateLessThanEqual(String _id, Date searchDate);
     Optional<Post> findBy_idAndAuthorUsername(String _id, String username);
     Optional<Post> findBy_id(String _id);

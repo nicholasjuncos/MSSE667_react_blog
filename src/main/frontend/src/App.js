@@ -6,9 +6,8 @@ import HomePage from "./views/HomePage";
 import LoginPage from "./views/auth/LoginPage";
 import RegisterPage from "./views/auth/RegisterPage";
 import ProfilePage from "./views/auth/ProfilePage";
-import BoardUser from "./views/test/board-user.component";
-import BoardModerator from "./views/test/board-moderator.component";
-import BoardAdmin from "./views/test/board-admin.component";
+import PostDetailPage from "./views/post/PostDetailPage";
+import AuthenticatedRoute from './AuthenticatedRoute';
 
 function App() {
   return (
@@ -21,10 +20,13 @@ function App() {
                       <Route exact path={["/", "/home"]} component={HomePage} />
                       <Route exact path="/login" component={LoginPage} />
                       <Route exact path="/register" component={RegisterPage} />
-                      <Route exact path="/profile" component={ProfilePage} />
-                      <Route path="/user" component={BoardUser} />
-                      <Route path="/mod" component={BoardModerator} />
-                      <Route path="/admin" component={BoardAdmin} />
+                      <AuthenticatedRoute exact path="/profile" component={ProfilePage} />
+                      <Route path="/profile/:id" component={ProfilePage} />
+                      <AuthenticatedRoute path="/my/posts/:id" component={PostDetailPage}/>
+                      <Route path="/posts/:id" component={PostDetailPage}/>
+                      {/*<Route path="/user" component={BoardUser} />*/}
+                      {/*<Route path="/mod" component={BoardModerator} />*/}
+                      {/*<Route path="/admin" component={BoardAdmin} />*/}
                   </Switch>
               </div>
           </div>

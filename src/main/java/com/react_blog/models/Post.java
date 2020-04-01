@@ -1,5 +1,6 @@
 package com.react_blog.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 
 import java.util.Date;
@@ -9,6 +10,8 @@ public class Post {
     private String _id;
     private User author;
     private Boolean published;
+
+    @JsonFormat(pattern="MM/dd/yyyy")
     private Date postDate;
     private String title;
     private String title2;

@@ -3,6 +3,7 @@ import PostDetailComponent from "../../components/posts/PostDetailComponent";
 import PostService from "../../services/post.service";
 import AuthService from "../../services/auth/auth.service";
 import {Redirect} from "react-router-dom";
+import PostFormComponent from "../../components/posts/PostFormComponent";
 
 export default class PostDetailPage extends Component {
     constructor(props) {
@@ -67,9 +68,9 @@ export default class PostDetailPage extends Component {
                 { this.state.post &&
                     <PostDetailComponent post={this.state.post} isAuthor={this.state.isAuthor}/>
                 }
-                {/*{ this.state.post && this.state.isAuthor &&*/}
-                {/*    <PostFormComponent post={this.state.post} type={'update'}/>*/}
-                {/*}*/}
+                { this.state.post && this.state.isAuthor &&
+                    <PostFormComponent post={this.state.post} formType={'update'} history={this.props.history}/>
+                }
             </div>
         );
     }

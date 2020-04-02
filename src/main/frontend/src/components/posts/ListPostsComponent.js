@@ -55,9 +55,11 @@ class ListPostsComponent extends Component {
                                         </td>
                                         {!this.state.isUser
                                             ?
-                                            <Link to={`profile/${post.author.username}/`}>
-                                                <td>{post.author.firstName} {post.author.lastName}</td>
-                                            </Link>
+                                            <td><
+                                                Link to={`profile/${post.author.username}/`}>
+                                                    {post.author.firstName} {post.author.lastName}
+                                                </Link>
+                                            </td>
                                             :
                                             null
                                         }

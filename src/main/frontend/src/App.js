@@ -8,6 +8,7 @@ import RegisterPage from "./views/auth/RegisterPage";
 import ProfilePage from "./views/auth/ProfilePage";
 import PostDetailPage from "./views/post/PostDetailPage";
 import AuthenticatedRoute from './AuthenticatedRoute';
+import PostCreatePage from "./views/post/PostCreatePage";
 
 function App() {
   return (
@@ -22,11 +23,9 @@ function App() {
                       <Route exact path="/register" component={RegisterPage} />
                       <AuthenticatedRoute exact path="/profile" component={ProfilePage} />
                       <Route path="/profile/:username" component={ProfilePage} />
+                      <AuthenticatedRoute path="/my/posts/create" exact component={PostCreatePage}/>
                       <AuthenticatedRoute path="/my/posts/:id" component={PostDetailPage}/>
                       <Route path="/posts/:id" component={PostDetailPage}/>
-                      {/*<Route path="/user" component={BoardUser} />*/}
-                      {/*<Route path="/mod" component={BoardModerator} />*/}
-                      {/*<Route path="/admin" component={BoardAdmin} />*/}
                   </Switch>
               </div>
           </div>

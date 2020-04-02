@@ -2,7 +2,6 @@ package com.react_blog.services.post;
 
 import com.react_blog.models.Post;
 import com.react_blog.payload.request.PostRequest;
-import com.react_blog.payload.request.PostUpdateRequest;
 
 import java.util.List;
 
@@ -27,7 +26,7 @@ interface PostService {
     Post findBy_idAndAuthorUsername(String _id, String username);
 
     Post create(PostRequest postRequest, String username);
-    Post update(PostUpdateRequest postRequest, String _id, String user_id);
+    Post update(PostRequest postRequest, String _id, String user_id);
     Post delete(String _id,  String user_id);
 
 }

@@ -1,7 +1,6 @@
 package com.react_blog.controllers;
 
 import com.react_blog.payload.request.PostRequest;
-import com.react_blog.payload.request.PostUpdateRequest;
 import com.react_blog.repositories.PostRepository;
 import com.react_blog.security.jwt.JwtUtils;
 import com.react_blog.services.post.MongoPostService;
@@ -35,7 +34,7 @@ public class PostController {
     public ResponseEntity<?> getPosts() { return ResponseEntity.ok(service.findAll());}
 
     @PostMapping("/")
-    @PreAuthorize("hasRole('User')")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> createPost(@RequestHeader Map<String, String> headers, @RequestBody @Valid PostRequest postRequest) {
         String username = jwtUtils.getLoggedInUser(headers);
         return ResponseEntity.ok(service.create(postRequest, username));
@@ -83,7 +82,7 @@ public class PostController {
 
     @PutMapping("/my/posts/{post_id}")
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity<?> updateAuthorPost(@RequestHeader Map<String, String> headers, @PathVariable("post_id") String post_id, @RequestBody @Valid PostUpdateRequest postRequest) {
+    public ResponseEntity<?> updateAuthorPost(@RequestHeader Map<String, String> headers, @PathVariable("post_id") String post_id, @RequestBody @Valid PostRequest postRequest) {
         String username = jwtUtils.getLoggedInUser(headers);
         return ResponseEntity.ok(service.update(postRequest, post_id, username));
     }

@@ -3,7 +3,6 @@ package com.react_blog.services.post;
 import com.react_blog.models.Post;
 import com.react_blog.models.User;
 import com.react_blog.payload.request.PostRequest;
-import com.react_blog.payload.request.PostUpdateRequest;
 import com.react_blog.repositories.PostRepository;
 import com.react_blog.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,7 +92,7 @@ public class MongoPostService implements PostService {
     }
 
     @Override
-    public Post update(PostUpdateRequest postRequest, String _id, String username) {
+    public Post update(PostRequest postRequest, String _id, String username) {
         Post post = findPostBy_idAndAuthorUsername(_id, username);
         post.update(postRequest.getPublished(), postRequest.getPostDate(),
                 postRequest.getTitle(), postRequest.getTitle2(), postRequest.getSubtitle1(),

@@ -9,6 +9,9 @@ export default class PostFormComponent extends Component {
         super(props);
         this.handlePost = this.handlePost.bind(this);
         this.onChangeField = this.onChangeField.bind(this);
+        if(this.props.post) {
+            this.handleDelete = this.handleDelete.bind(this);
+        }
         this.state = {
             formType: props.formType,
             _id: props.post ? props.post._id : undefined,
@@ -31,7 +34,6 @@ export default class PostFormComponent extends Component {
     }
 
     onChangeField(e) {
-        console.log(e);
         if (e.target) {
             const target = e.target;
             const value = target.name === 'published' ? target.checked : target.value;
@@ -76,7 +78,6 @@ export default class PostFormComponent extends Component {
                 )
                     .then(response => {
                             alert('Successfully created post!');
-                            console.log(this.props);
                             this.props.history.push("/profile");
                             window.location.reload();
                         },
@@ -104,7 +105,6 @@ export default class PostFormComponent extends Component {
                 )
                     .then(response => {
                             alert('Successfully updated post!');
-                            console.log(this.props);
                             this.props.history.push("/profile");
                             window.location.reload();
                         },
@@ -118,6 +118,19 @@ export default class PostFormComponent extends Component {
         });
     }
 
+    handleDelete(e) {
+        PostService.deletePost(this.state._id).then(
+            response => {
+                alert('Successfully deleted post!');
+                this.props.history.push("/profile");
+                window.location.reload();
+            },
+            error => {
+                console.log(error);
+            }
+        )
+    }
+
     render() {
 
         return (
@@ -127,6 +140,9 @@ export default class PostFormComponent extends Component {
                 <h4 className="text-center">Update Post</h4>
                 }
                 <div className="card">
+                    {this.state.formType === 'update' &&
+                    <div className="text-right"><button onClick={this.handleDelete} className="btn btn-danger">Delete</button></div>
+                    }
                     <Form
                         onSubmit={this.handlePost}
                         ref={c => {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* nativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nativeTests.m */; };
+		00E356F31AD99517003FC87E /* ReactBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactBlogTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,11 +15,11 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2D09141CD39D323BD80C5FC5 /* libPods-native.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 834CEAA08D3D17B60B8FCFCE /* libPods-native.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* nativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nativeTests.m */; };
-		6C76FD88495242CA72ED5703 /* libPods-native-nativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 095AE89262D90BEFF7017F76 /* libPods-native-nativeTests.a */; };
-		CBB9416E25ED419D0573D12B /* libPods-native-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4CA59F893E82BD78BA8C1A /* libPods-native-tvOSTests.a */; };
-		EFAF9884C43638382F522EDF /* libPods-native-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011A0F5B1349F0DC7C0424FD /* libPods-native-tvOS.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* ReactBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactBlogTests.m */; };
+		52DDE4FB7384C666C7C59217 /* libPods-ReactBlog-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3A0E564805FEDE83FE731 /* libPods-ReactBlog-tvOS.a */; };
+		79998C6753839D32A1A005D4 /* libPods-ReactBlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0CAB10C99D9F457B1FE7 /* libPods-ReactBlog.a */; };
+		7B4DAC3124AF6FFC9EB30BF2 /* libPods-ReactBlog-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C5EF7BD7169031E0FC119B /* libPods-ReactBlog-tvOSTests.a */; };
+		CA82F3977BFA5C1AD85D5DC8 /* libPods-ReactBlog-ReactBlogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C988418461D8839FC986A339 /* libPods-ReactBlog-ReactBlogTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = native;
+			remoteInfo = ReactBlog;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "native-tvOS";
+			remoteInfo = "ReactBlog-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* nativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ReactBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* nativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nativeTests.m; sourceTree = "<group>"; };
-		011A0F5B1349F0DC7C0424FD /* libPods-native-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-native-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04D985E0B4BB7AED6348C621 /* Pods-native-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-tvOS.release.xcconfig"; path = "Target Support Files/Pods-native-tvOS/Pods-native-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		095AE89262D90BEFF7017F76 /* libPods-native-nativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-native-nativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = native.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = native/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = native/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ReactBlogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactBlogTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ReactBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactBlog/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactBlog/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = native/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = native/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = native/main.m; sourceTree = "<group>"; };
-		2AEC105F2413B83FD42D2E59 /* Pods-native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native.release.xcconfig"; path = "Target Support Files/Pods-native/Pods-native.release.xcconfig"; sourceTree = "<group>"; };
-		2B8A0F1FC75442D06C1547DA /* Pods-native-nativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-nativeTests.release.xcconfig"; path = "Target Support Files/Pods-native-nativeTests/Pods-native-nativeTests.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* native-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "native-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* native-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "native-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F64FC33465182D9897BB292 /* Pods-native-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-native-tvOSTests/Pods-native-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8104A74E92DD8B5A1BB163B8 /* Pods-native-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-native-tvOSTests/Pods-native-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		8105E6CFD5B1A505367DC9B3 /* Pods-native-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-native-tvOS/Pods-native-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		834CEAA08D3D17B60B8FCFCE /* libPods-native.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-native.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1EBAAF3D1210276561A1CF7 /* Pods-native.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native.debug.xcconfig"; path = "Target Support Files/Pods-native/Pods-native.debug.xcconfig"; sourceTree = "<group>"; };
-		E1E7A83CDCD7C47AA4A47D20 /* Pods-native-nativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-nativeTests.debug.xcconfig"; path = "Target Support Files/Pods-native-nativeTests/Pods-native-nativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactBlog/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactBlog/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactBlog/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* ReactBlog-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactBlog-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* ReactBlog-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactBlog-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C5EF7BD7169031E0FC119B /* libPods-ReactBlog-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactBlog-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F3A0E564805FEDE83FE731 /* libPods-ReactBlog-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactBlog-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		508E0CAB10C99D9F457B1FE7 /* libPods-ReactBlog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactBlog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F265A981306504A0D87EF7E /* Pods-ReactBlog-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ReactBlog-tvOSTests/Pods-ReactBlog-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6000EA5C193E5FCEF337DD1B /* Pods-ReactBlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog.release.xcconfig"; path = "Target Support Files/Pods-ReactBlog/Pods-ReactBlog.release.xcconfig"; sourceTree = "<group>"; };
+		7239D11E795AEA32994F1A76 /* Pods-ReactBlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog.debug.xcconfig"; path = "Target Support Files/Pods-ReactBlog/Pods-ReactBlog.debug.xcconfig"; sourceTree = "<group>"; };
+		ACDE496ADDEF2DA92235C894 /* Pods-ReactBlog-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactBlog-tvOSTests/Pods-ReactBlog-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C988418461D8839FC986A339 /* libPods-ReactBlog-ReactBlogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactBlog-ReactBlogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDCC6B4123051411F978BE1A /* Pods-ReactBlog-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ReactBlog-tvOS/Pods-ReactBlog-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		CEC1BDD6D77896A5915CD418 /* Pods-ReactBlog-ReactBlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-ReactBlogTests.release.xcconfig"; path = "Target Support Files/Pods-ReactBlog-ReactBlogTests/Pods-ReactBlog-ReactBlogTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEF8DD3E6CD5C1E7EB974D7A /* Pods-ReactBlog-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactBlog-tvOS/Pods-ReactBlog-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E2D3219D9DAC92438B9C990B /* Pods-ReactBlog-ReactBlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactBlog-ReactBlogTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactBlog-ReactBlogTests/Pods-ReactBlog-ReactBlogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FE4CA59F893E82BD78BA8C1A /* libPods-native-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-native-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C76FD88495242CA72ED5703 /* libPods-native-nativeTests.a in Frameworks */,
+				CA82F3977BFA5C1AD85D5DC8 /* libPods-ReactBlog-ReactBlogTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D09141CD39D323BD80C5FC5 /* libPods-native.a in Frameworks */,
+				79998C6753839D32A1A005D4 /* libPods-ReactBlog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFAF9884C43638382F522EDF /* libPods-native-tvOS.a in Frameworks */,
+				52DDE4FB7384C666C7C59217 /* libPods-ReactBlog-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB9416E25ED419D0573D12B /* libPods-native-tvOSTests.a in Frameworks */,
+				7B4DAC3124AF6FFC9EB30BF2 /* libPods-ReactBlog-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* nativeTests */ = {
+		00E356EF1AD99517003FC87E /* ReactBlogTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* nativeTests.m */,
+				00E356F21AD99517003FC87E /* ReactBlogTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = nativeTests;
+			path = ReactBlogTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,23 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		09400A9A845CF6A969D3B0C8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B1EBAAF3D1210276561A1CF7 /* Pods-native.debug.xcconfig */,
-				2AEC105F2413B83FD42D2E59 /* Pods-native.release.xcconfig */,
-				E1E7A83CDCD7C47AA4A47D20 /* Pods-native-nativeTests.debug.xcconfig */,
-				2B8A0F1FC75442D06C1547DA /* Pods-native-nativeTests.release.xcconfig */,
-				8105E6CFD5B1A505367DC9B3 /* Pods-native-tvOS.debug.xcconfig */,
-				04D985E0B4BB7AED6348C621 /* Pods-native-tvOS.release.xcconfig */,
-				5F64FC33465182D9897BB292 /* Pods-native-tvOSTests.debug.xcconfig */,
-				8104A74E92DD8B5A1BB163B8 /* Pods-native-tvOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		13B07FAE1A68108700A75B9A /* native */ = {
+		13B07FAE1A68108700A75B9A /* ReactBlog */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -149,7 +133,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = native;
+			name = ReactBlog;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -157,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				834CEAA08D3D17B60B8FCFCE /* libPods-native.a */,
-				095AE89262D90BEFF7017F76 /* libPods-native-nativeTests.a */,
-				011A0F5B1349F0DC7C0424FD /* libPods-native-tvOS.a */,
-				FE4CA59F893E82BD78BA8C1A /* libPods-native-tvOSTests.a */,
+				508E0CAB10C99D9F457B1FE7 /* libPods-ReactBlog.a */,
+				C988418461D8839FC986A339 /* libPods-ReactBlog-ReactBlogTests.a */,
+				46F3A0E564805FEDE83FE731 /* libPods-ReactBlog-tvOS.a */,
+				43C5EF7BD7169031E0FC119B /* libPods-ReactBlog-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,12 +159,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* native */,
+				13B07FAE1A68108700A75B9A /* ReactBlog */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* nativeTests */,
+				00E356EF1AD99517003FC87E /* ReactBlogTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				09400A9A845CF6A969D3B0C8 /* Pods */,
+				CF3E0BBC19F93F212C77D40A /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -190,22 +174,38 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* native.app */,
-				00E356EE1AD99517003FC87E /* nativeTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* native-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* native-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ReactBlog.app */,
+				00E356EE1AD99517003FC87E /* ReactBlogTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* ReactBlog-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* ReactBlog-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CF3E0BBC19F93F212C77D40A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7239D11E795AEA32994F1A76 /* Pods-ReactBlog.debug.xcconfig */,
+				6000EA5C193E5FCEF337DD1B /* Pods-ReactBlog.release.xcconfig */,
+				E2D3219D9DAC92438B9C990B /* Pods-ReactBlog-ReactBlogTests.debug.xcconfig */,
+				CEC1BDD6D77896A5915CD418 /* Pods-ReactBlog-ReactBlogTests.release.xcconfig */,
+				DEF8DD3E6CD5C1E7EB974D7A /* Pods-ReactBlog-tvOS.debug.xcconfig */,
+				CDCC6B4123051411F978BE1A /* Pods-ReactBlog-tvOS.release.xcconfig */,
+				ACDE496ADDEF2DA92235C894 /* Pods-ReactBlog-tvOSTests.debug.xcconfig */,
+				5F265A981306504A0D87EF7E /* Pods-ReactBlog-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* nativeTests */ = {
+		00E356ED1AD99517003FC87E /* ReactBlogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "nativeTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactBlogTests" */;
 			buildPhases = (
-				093EA9660AEB257547E7F46D /* [CP] Check Pods Manifest.lock */,
+				466D3680435A3B9E5A6E38F5 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -215,16 +215,16 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = nativeTests;
-			productName = nativeTests;
-			productReference = 00E356EE1AD99517003FC87E /* nativeTests.xctest */;
+			name = ReactBlogTests;
+			productName = ReactBlogTests;
+			productReference = 00E356EE1AD99517003FC87E /* ReactBlogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* native */ = {
+		13B07F861A680F5B00A75B9A /* ReactBlog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "native" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactBlog" */;
 			buildPhases = (
-				32A87F0526742F75F8260F81 /* [CP] Check Pods Manifest.lock */,
+				F4F43812A307DF71BF061B6D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -235,16 +235,16 @@
 			);
 			dependencies = (
 			);
-			name = native;
-			productName = native;
-			productReference = 13B07F961A680F5B00A75B9A /* native.app */;
+			name = ReactBlog;
+			productName = ReactBlog;
+			productReference = 13B07F961A680F5B00A75B9A /* ReactBlog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* native-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* ReactBlog-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "native-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactBlog-tvOS" */;
 			buildPhases = (
-				52C4D4F8665182EF00718A63 /* [CP] Check Pods Manifest.lock */,
+				F3F344C3F1DBFD0E4B892DB7 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -255,16 +255,16 @@
 			);
 			dependencies = (
 			);
-			name = "native-tvOS";
-			productName = "native-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* native-tvOS.app */;
+			name = "ReactBlog-tvOS";
+			productName = "ReactBlog-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* ReactBlog-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* native-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* ReactBlog-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "native-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactBlog-tvOSTests" */;
 			buildPhases = (
-				2D768EB0A82EB1FFC0744698 /* [CP] Check Pods Manifest.lock */,
+				3EF75F053F3892A0D0C94AEE /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -274,9 +274,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "native-tvOSTests";
-			productName = "native-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* native-tvOSTests.xctest */;
+			name = "ReactBlog-tvOSTests";
+			productName = "ReactBlog-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* ReactBlog-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "native" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactBlog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,10 +318,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* native */,
-				00E356ED1AD99517003FC87E /* nativeTests */,
-				2D02E47A1E0B4A5D006451C7 /* native-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* native-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* ReactBlog */,
+				00E356ED1AD99517003FC87E /* ReactBlogTests */,
+				2D02E47A1E0B4A5D006451C7 /* ReactBlog-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* ReactBlog-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,28 +375,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		093EA9660AEB257547E7F46D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-native-nativeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,7 +389,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D768EB0A82EB1FFC0744698 /* [CP] Check Pods Manifest.lock */ = {
+		3EF75F053F3892A0D0C94AEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,14 +404,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-native-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactBlog-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		32A87F0526742F75F8260F81 /* [CP] Check Pods Manifest.lock */ = {
+		466D3680435A3B9E5A6E38F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,14 +426,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-native-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactBlog-ReactBlogTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52C4D4F8665182EF00718A63 /* [CP] Check Pods Manifest.lock */ = {
+		F3F344C3F1DBFD0E4B892DB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -470,7 +448,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-native-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactBlog-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F43812A307DF71BF061B6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactBlog-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* nativeTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ReactBlogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* nativeTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* ReactBlogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +557,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* native */;
+			target = 13B07F861A680F5B00A75B9A /* ReactBlog */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* native-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* ReactBlog-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -574,7 +574,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = native;
+			path = ReactBlog;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -582,14 +582,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E7A83CDCD7C47AA4A47D20 /* Pods-native-nativeTests.debug.xcconfig */;
+			baseConfigurationReference = E2D3219D9DAC92438B9C990B /* Pods-ReactBlog-ReactBlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = nativeTests/Info.plist;
+				INFOPLIST_FILE = ReactBlogTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -599,17 +599,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/native.app/native";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactBlog.app/ReactBlog";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B8A0F1FC75442D06C1547DA /* Pods-native-nativeTests.release.xcconfig */;
+			baseConfigurationReference = CEC1BDD6D77896A5915CD418 /* Pods-ReactBlog-ReactBlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = nativeTests/Info.plist;
+				INFOPLIST_FILE = ReactBlogTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -619,13 +619,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/native.app/native";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactBlog.app/ReactBlog";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1EBAAF3D1210276561A1CF7 /* Pods-native.debug.xcconfig */;
+			baseConfigurationReference = 7239D11E795AEA32994F1A76 /* Pods-ReactBlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -635,7 +635,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = native/Info.plist;
+				INFOPLIST_FILE = ReactBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -643,7 +643,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = native;
+				PRODUCT_NAME = ReactBlog;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -652,12 +652,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AEC105F2413B83FD42D2E59 /* Pods-native.release.xcconfig */;
+			baseConfigurationReference = 6000EA5C193E5FCEF337DD1B /* Pods-ReactBlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = native/Info.plist;
+				INFOPLIST_FILE = ReactBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -665,7 +665,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = native;
+				PRODUCT_NAME = ReactBlog;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -673,7 +673,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8105E6CFD5B1A505367DC9B3 /* Pods-native-tvOS.debug.xcconfig */;
+			baseConfigurationReference = DEF8DD3E6CD5C1E7EB974D7A /* Pods-ReactBlog-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -684,14 +684,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "native-tvOS/Info.plist";
+				INFOPLIST_FILE = "ReactBlog-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.native-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ReactBlog-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -701,7 +701,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04D985E0B4BB7AED6348C621 /* Pods-native-tvOS.release.xcconfig */;
+			baseConfigurationReference = CDCC6B4123051411F978BE1A /* Pods-ReactBlog-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -712,14 +712,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "native-tvOS/Info.plist";
+				INFOPLIST_FILE = "ReactBlog-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.native-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ReactBlog-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -729,7 +729,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F64FC33465182D9897BB292 /* Pods-native-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = ACDE496ADDEF2DA92235C894 /* Pods-ReactBlog-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -739,24 +739,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "native-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ReactBlog-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.native-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ReactBlog-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/native-tvOS.app/native-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactBlog-tvOS.app/ReactBlog-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8104A74E92DD8B5A1BB163B8 /* Pods-native-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 5F265A981306504A0D87EF7E /* Pods-ReactBlog-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -766,17 +766,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "native-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ReactBlog-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.native-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ReactBlog-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/native-tvOS.app/native-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactBlog-tvOS.app/ReactBlog-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -897,7 +897,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "nativeTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactBlogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -906,7 +906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "native" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactBlog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -915,7 +915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "native-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactBlog-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -924,7 +924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "native-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactBlog-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -933,7 +933,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "native" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactBlog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

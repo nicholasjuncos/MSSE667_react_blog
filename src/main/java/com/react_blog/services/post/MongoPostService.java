@@ -82,10 +82,14 @@ public class MongoPostService implements PostService {
         Optional<User> result = userRepository.findByUsername(username);
         User user = result.orElseThrow(() -> new AuthenticationException("User with username: " + username + " not found") {});
         Post post = new Post(user, postRequest.getPublished(), postRequest.getPostDate(),
-                postRequest.getTitle(), postRequest.getTitle2(), postRequest.getSubtitle1(),
-                postRequest.getDescription1(), postRequest.getSubtitle2(), postRequest.getDescription2(),
-                postRequest.getSubtitle3(), postRequest.getDescription3(), postRequest.getQuote1(),
-                postRequest.getQuoter1(), postRequest.getQuote2(), postRequest.getQuoter2(), postRequest.getCategory(),
+                postRequest.getTitle(),
+//                postRequest.getTitle2(),
+                postRequest.getSubtitle1(), postRequest.getDescription1(),
+//                postRequest.getSubtitle2(), postRequest.getDescription2(),
+//                postRequest.getSubtitle3(), postRequest.getDescription3(),
+                postRequest.getQuote1(), postRequest.getQuoter1(),
+//                postRequest.getQuote2(), postRequest.getQuoter2(),
+                postRequest.getCategory(),
                 0);
         post = postRepository.save(post);
         return post;
@@ -95,10 +99,14 @@ public class MongoPostService implements PostService {
     public Post update(PostRequest postRequest, String _id, String username) {
         Post post = findPostBy_idAndAuthorUsername(_id, username);
         post.update(postRequest.getPublished(), postRequest.getPostDate(),
-                postRequest.getTitle(), postRequest.getTitle2(), postRequest.getSubtitle1(),
-                postRequest.getDescription1(), postRequest.getSubtitle2(), postRequest.getDescription2(),
-                postRequest.getSubtitle3(), postRequest.getDescription3(), postRequest.getQuote1(),
-                postRequest.getQuoter1(), postRequest.getQuote2(), postRequest.getQuoter2(), postRequest.getCategory());
+                postRequest.getTitle(),
+//                postRequest.getTitle2(),
+                postRequest.getSubtitle1(), postRequest.getDescription1(),
+//                postRequest.getSubtitle2(), postRequest.getDescription2(),
+//                postRequest.getSubtitle3(), postRequest.getDescription3(),
+                postRequest.getQuote1(), postRequest.getQuoter1(),
+//                postRequest.getQuote2(), postRequest.getQuoter2(),
+                postRequest.getCategory());
         post = postRepository.save(post);
         return post;
     }

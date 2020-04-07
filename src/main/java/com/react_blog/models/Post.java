@@ -14,17 +14,17 @@ public class Post {
     @JsonFormat(pattern="MM/dd/yyyy")
     private Date postDate;
     private String title;
-    private String title2;
+//    private String title2;
     private String subtitle1;
     private String description1;
-    private String subtitle2;
-    private String description2;
-    private String subtitle3;
-    private String description3;
+//    private String subtitle2;
+//    private String description2;
+//    private String subtitle3;
+//    private String description3;
     private String quote1;
     private String quoter1;
-    private String quote2;
-    private String quoter2;
+//    private String quote2;
+//    private String quoter2;
     private String category;
     private Integer likeCount;
 //    private Image coverImg;
@@ -32,24 +32,28 @@ public class Post {
 //    private Image image2;
 //    private Image image3;
 
-    public Post(User author, Boolean published, Date postDate, String title, String title2, String subtitle1,
-                String description1, String subtitle2, String description2, String subtitle3, String description3,
-                String quote1, String quoter1, String quote2, String quoter2, String category, Integer likeCount) {
+    public Post(User author, Boolean published, Date postDate, String title,
+//                String title2,
+                String subtitle1, String description1,
+//                String subtitle2, String description2, String subtitle3, String description3,
+                String quote1, String quoter1,
+//                String quote2, String quoter2,
+                String category, Integer likeCount) {
         this.author = author;
         this.published = published;
         this.postDate = postDate;
         this.title = title;
-        this.title2 = title2;
+//        this.title2 = title2;
         this.subtitle1 = subtitle1;
         this.description1 = description1;
-        this.subtitle2 = subtitle2;
-        this.description2 = description2;
-        this.subtitle3 = subtitle3;
-        this.description3 = description3;
+//        this.subtitle2 = subtitle2;
+//        this.description2 = description2;
+//        this.subtitle3 = subtitle3;
+//        this.description3 = description3;
         this.quote1 = quote1;
         this.quoter1 = quoter1;
-        this.quote2 = quote2;
-        this.quoter2 = quoter2;
+//        this.quote2 = quote2;
+//        this.quoter2 = quoter2;
         this.category = category;
         this.likeCount = likeCount;
     }
@@ -90,13 +94,13 @@ public class Post {
         this.title = title;
     }
 
-    public String getTitle2() {
-        return title2;
-    }
+//    public String getTitle2() {
+//        return title2;
+//    }
 
-    public void setTitle2(String title2) {
-        this.title2 = title2;
-    }
+//    public void setTitle2(String title2) {
+//        this.title2 = title2;
+//    }
 
     public String getSubtitle1() {
         return subtitle1;
@@ -114,37 +118,37 @@ public class Post {
         this.description1 = description1;
     }
 
-    public String getSubtitle2() {
-        return subtitle2;
-    }
-
-    public void setSubtitle2(String subtitle2) {
-        this.subtitle2 = subtitle2;
-    }
-
-    public String getDescription2() {
-        return description2;
-    }
-
-    public void setDescription2(String description2) {
-        this.description2 = description2;
-    }
-
-    public String getSubtitle3() {
-        return subtitle3;
-    }
-
-    public void setSubtitle3(String subtitle3) {
-        this.subtitle3 = subtitle3;
-    }
-
-    public String getDescription3() {
-        return description3;
-    }
-
-    public void setDescription3(String description3) {
-        this.description3 = description3;
-    }
+//    public String getSubtitle2() {
+//        return subtitle2;
+//    }
+//
+//    public void setSubtitle2(String subtitle2) {
+//        this.subtitle2 = subtitle2;
+//    }
+//
+//    public String getDescription2() {
+//        return description2;
+//    }
+//
+//    public void setDescription2(String description2) {
+//        this.description2 = description2;
+//    }
+//
+//    public String getSubtitle3() {
+//        return subtitle3;
+//    }
+//
+//    public void setSubtitle3(String subtitle3) {
+//        this.subtitle3 = subtitle3;
+//    }
+//
+//    public String getDescription3() {
+//        return description3;
+//    }
+//
+//    public void setDescription3(String description3) {
+//        this.description3 = description3;
+//    }
 
     public String getQuote1() {
         return quote1;
@@ -162,21 +166,21 @@ public class Post {
         this.quoter1 = quoter1;
     }
 
-    public String getQuote2() {
-        return quote2;
-    }
-
-    public void setQuote2(String quote2) {
-        this.quote2 = quote2;
-    }
-
-    public String getQuoter2() {
-        return quoter2;
-    }
-
-    public void setQuoter2(String quoter2) {
-        this.quoter2 = quoter2;
-    }
+//    public String getQuote2() {
+//        return quote2;
+//    }
+//
+//    public void setQuote2(String quote2) {
+//        this.quote2 = quote2;
+//    }
+//
+//    public String getQuoter2() {
+//        return quoter2;
+//    }
+//
+//    public void setQuoter2(String quoter2) {
+//        this.quoter2 = quoter2;
+//    }
 
     public String getCategory() {
         return category;
@@ -194,23 +198,27 @@ public class Post {
         this.likeCount = likeCount;
     }
 
-    public void update(Boolean published, Date postDate, String title, String title2, String subtitle1,
-           String description1, String subtitle2, String description2, String subtitle3, String description3,
-           String quote1, String quoter1, String quote2, String quoter2, String category) {
+    public void update(Boolean published, Date postDate, String title,
+//                       String title2,
+                       String subtitle1, String description1,
+//                       String subtitle2, String description2, String subtitle3, String description3,
+                       String quote1, String quoter1,
+//                       String quote2, String quoter2,
+                       String category) {
         this.published = published;
         this.postDate = postDate;
         this.title = title;
-        this.title2 = title2;
+//        this.title2 = title2;
         this.subtitle1 = subtitle1;
         this.description1 = description1;
-        this.subtitle2 = subtitle2;
-        this.description2 = description2;
-        this.subtitle3 = subtitle3;
-        this.description3 = description3;
+//        this.subtitle2 = subtitle2;
+//        this.description2 = description2;
+//        this.subtitle3 = subtitle3;
+//        this.description3 = description3;
         this.quote1 = quote1;
         this.quoter1 = quoter1;
-        this.quote2 = quote2;
-        this.quoter2 = quoter2;
+//        this.quote2 = quote2;
+//        this.quoter2 = quoter2;
         this.category = category;
     }
 }

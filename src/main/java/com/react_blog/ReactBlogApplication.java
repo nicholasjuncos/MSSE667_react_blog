@@ -36,6 +36,9 @@ public class ReactBlogApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		postRepository.deleteAll();
+		userRepository.deleteAll();
+		roleRepository.deleteAll();
 		if(roleRepository.count() != 3) {
 			roleRepository.deleteAll();
 			roleRepository.save(new Role(ERole.ROLE_USER));
@@ -71,19 +74,23 @@ public class ReactBlogApplication implements CommandLineRunner {
 		String slightlyLargishTestQuote = "This is a slightly largish test description. Will need to span a little longer for test purposes.";
 		String testQuoter = "Test Quoter";
 		Date date1 = new GregorianCalendar(2020, Calendar.FEBRUARY, 14).getTime();
-		Post post1 = new Post(user, true, date1, "This is the first Post", "", "This is a test post.", largeTestDescription, "", "", "", "", "", "", "", "", "", 0);
+//		Post post1 = new Post(user, true, date1, "This is the first Post", "", "This is a test post.", largeTestDescription, "", "", "", "", "", "", "", "", "", 0);
+		Post post1 = new Post(user, true, date1, "This is the first Post", "This is a test post.", largeTestDescription, "", "", "", 0);
 		postRepository.save(post1);
 		Date date2 = new GregorianCalendar(2020, Calendar.FEBRUARY, 26).getTime();
-		Post post2 = new Post(user, false, date2, "This is the second Post", "", "This is a test post.", largeTestDescription, "", "", "", "", slightlyLargishTestQuote, testQuoter, "", "", "", 0);
+//		Post post2 = new Post(user, false, date2, "This is the second Post", "", "This is a test post.", largeTestDescription, "", "", "", "", slightlyLargishTestQuote, testQuoter, "", "", "", 0);
+		Post post2 = new Post(user, false, date2, "This is the second Post", "This is a test post.", largeTestDescription, slightlyLargishTestQuote, testQuoter, "", 0);
 		postRepository.save(post2);
 		Date date3 = new GregorianCalendar(2020, Calendar.MARCH, 29).getTime();
-		Post post3 = new Post(user, true, date3, "This is the third Post", "", "This is a test post.", largeTestDescription, "Testing it out", largeTestDescription+largeTestDescription, "", "", "", "", "", "", "", 0);
+//		Post post3 = new Post(user, true, date3, "This is the third Post", "", "This is a test post.", largeTestDescription, "Testing it out", largeTestDescription+largeTestDescription, "", "", "", "", "", "", "", 0);
+		Post post3 = new Post(user, true, date3, "This is the third Post", "This is a test post.", largeTestDescription+largeTestDescription, "", "", "", 0);
 		postRepository.save(post3);
 		Date date4 = new GregorianCalendar(2020, Calendar.JUNE, 30).getTime();
-		Post post4 = new Post(user, true, date4, "This is the fourth Post", "", "This is a test post.", largeTestDescription, "Testing it out", largeTestDescription+largeTestDescription, "", "", "", "", "", "", "", 0);
+		Post post4 = new Post(user, true, date4, "This is the fourth Post", "This is a test post.", largeTestDescription+largeTestDescription, "", "", "",  0);
 		postRepository.save(post4);
 		Date date5 = new GregorianCalendar(2019, Calendar.DECEMBER, 7).getTime();
-		Post post5 = new Post(user, true, date5, "This is the fifth Post", "", "This is a test post.", largeTestDescription, "Testing it out", largeTestDescription+largeTestDescription, "Testing it out again", largeTestDescription, slightlyLargishTestQuote, testQuoter, slightlyLargishTestQuote, testQuoter, "", 0);
+//		Post post5 = new Post(user, true, date5, "This is the fifth Post", "", "This is a test post.", largeTestDescription, "Testing it out", largeTestDescription+largeTestDescription, "Testing it out again", largeTestDescription, slightlyLargishTestQuote, testQuoter, slightlyLargishTestQuote, testQuoter, "", 0);
+		Post post5 = new Post(user, true, date5, "This is the fifth Post", "This is a test post.",largeTestDescription+largeTestDescription, slightlyLargishTestQuote, testQuoter, "", 0);
 		postRepository.save(post5);
 	}
 

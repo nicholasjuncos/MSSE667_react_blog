@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PostRequest {
-    SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/YYYY");
+    SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 //    @NotBlank
 //    private User author;
 //
@@ -30,8 +30,8 @@ public class PostRequest {
     @Size(max = 50)
     private String title;
 
-    @Size(max = 50)
-    private String title2;
+//    @Size(max = 50)
+//    private String title2;
 
     @NotBlank
     @Size(max = 50)
@@ -41,17 +41,17 @@ public class PostRequest {
     @Size(max = 1000)
     private String description1;
 
-    @Size(max = 50)
-    private String subtitle2;
-
-    @Size(max = 1000)
-    private String description2;
-
-    @Size(max = 50)
-    private String subtitle3;
-
-    @Size(max = 1000)
-    private String description3;
+//    @Size(max = 50)
+//    private String subtitle2;
+//
+//    @Size(max = 1000)
+//    private String description2;
+//
+//    @Size(max = 50)
+//    private String subtitle3;
+//
+//    @Size(max = 1000)
+//    private String description3;
 
     @Size(max = 500)
     private String quote1;
@@ -59,11 +59,11 @@ public class PostRequest {
     @Size(max = 100)
     private String quoter1;
 
-    @Size(max = 500)
-    private String quote2;
-
-    @Size(max = 100)
-    private String quoter2;
+//    @Size(max = 500)
+//    private String quote2;
+//
+//    @Size(max = 100)
+//    private String quoter2;
 
     @Size(max = 500)
     private String category;
@@ -99,13 +99,13 @@ public class PostRequest {
         this.title = title;
     }
 
-    public String getTitle2() {
-        return title2;
-    }
-
-    public void setTitle2(String title2) {
-        this.title2 = title2;
-    }
+//    public String getTitle2() {
+//        return title2;
+//    }
+//
+//    public void setTitle2(String title2) {
+//        this.title2 = title2;
+//    }
 
     public String getSubtitle1() {
         return subtitle1;
@@ -123,37 +123,37 @@ public class PostRequest {
         this.description1 = description1;
     }
 
-    public String getSubtitle2() {
-        return subtitle2;
-    }
-
-    public void setSubtitle2(String subtitle2) {
-        this.subtitle2 = subtitle2;
-    }
-
-    public String getDescription2() {
-        return description2;
-    }
-
-    public void setDescription2(String description2) {
-        this.description2 = description2;
-    }
-
-    public String getSubtitle3() {
-        return subtitle3;
-    }
-
-    public void setSubtitle3(String subtitle3) {
-        this.subtitle3 = subtitle3;
-    }
-
-    public String getDescription3() {
-        return description3;
-    }
-
-    public void setDescription3(String description3) {
-        this.description3 = description3;
-    }
+//    public String getSubtitle2() {
+//        return subtitle2;
+//    }
+//
+//    public void setSubtitle2(String subtitle2) {
+//        this.subtitle2 = subtitle2;
+//    }
+//
+//    public String getDescription2() {
+//        return description2;
+//    }
+//
+//    public void setDescription2(String description2) {
+//        this.description2 = description2;
+//    }
+//
+//    public String getSubtitle3() {
+//        return subtitle3;
+//    }
+//
+//    public void setSubtitle3(String subtitle3) {
+//        this.subtitle3 = subtitle3;
+//    }
+//
+//    public String getDescription3() {
+//        return description3;
+//    }
+//
+//    public void setDescription3(String description3) {
+//        this.description3 = description3;
+//    }
 
     public String getQuote1() {
         return quote1;
@@ -171,21 +171,21 @@ public class PostRequest {
         this.quoter1 = quoter1;
     }
 
-    public String getQuote2() {
-        return quote2;
-    }
-
-    public void setQuote2(String quote2) {
-        this.quote2 = quote2;
-    }
-
-    public String getQuoter2() {
-        return quoter2;
-    }
-
-    public void setQuoter2(String quoter2) {
-        this.quoter2 = quoter2;
-    }
+//    public String getQuote2() {
+//        return quote2;
+//    }
+//
+//    public void setQuote2(String quote2) {
+//        this.quote2 = quote2;
+//    }
+//
+//    public String getQuoter2() {
+//        return quoter2;
+//    }
+//
+//    public void setQuoter2(String quoter2) {
+//        this.quoter2 = quoter2;
+//    }
 
     public String getCategory() {
         return category;

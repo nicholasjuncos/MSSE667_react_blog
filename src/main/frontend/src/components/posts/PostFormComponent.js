@@ -18,17 +18,17 @@ export default class PostFormComponent extends Component {
             published: props.post ? props.post.published : false,
             postDate: props.post ? props.post.postDate : '',
             title: props.post ? props.post.title : '',
-            title2: props.post ? props.post.title2 : '',
+            // title2: props.post ? props.post.title2 : '',
             subtitle1: props.post ? props.post.subtitle1 : '',
             description1: props.post ? props.post.description1 : '',
-            subtitle2: props.post ? props.post.subtitle2 : '',
-            description2: props.post ? props.post.description2 : '',
-            subtitle3: props.post ? props.post.subtitle3 : '',
-            description3: props.post ? props.post.description3 : '',
+            // subtitle2: props.post ? props.post.subtitle2 : '',
+            // description2: props.post ? props.post.description2 : '',
+            // subtitle3: props.post ? props.post.subtitle3 : '',
+            // description3: props.post ? props.post.description3 : '',
             quote1: props.post ? props.post.quote1 : '',
             quoter1: props.post ? props.post.quoter1 : '',
-            quote2: props.post ? props.post.quote2 : '',
-            quoter2: props.post ? props.post.quoter2 : '',
+            // quote2: props.post ? props.post.quote2 : '',
+            // quoter2: props.post ? props.post.quoter2 : '',
             category: props.post ? props.post.category : ''
         };
     }
@@ -42,8 +42,11 @@ export default class PostFormComponent extends Component {
                 [name]: value
             });
         } else {
-            const value = e.substring(0, e.length - 14);
+            let value = e.substring(0, e.length - 14);
             const name = 'postDate';
+            if (value.includes('-')) {
+                value = e.substring(5, 7) + '/' + e.substring(8, 10) + '/' + e.substring(0, 4)
+            }
             this.setState({
                 [name]: value
             });
@@ -63,17 +66,17 @@ export default class PostFormComponent extends Component {
                     this.state.published,
                     this.state.postDate,
                     this.state.title,
-                    this.state.title2,
+                    // this.state.title2,
                     this.state.subtitle1,
                     this.state.description1,
-                    this.state.subtitle2,
-                    this.state.description2,
-                    this.state.subtitle3,
-                    this.state.description3,
+                    // this.state.subtitle2,
+                    // this.state.description2,
+                    // this.state.subtitle3,
+                    // this.state.description3,
                     this.state.quote1,
                     this.state.quoter1,
-                    this.state.quote2,
-                    this.state.quoter2,
+                    // this.state.quote2,
+                    // this.state.quoter2,
                     this.state.category
                 )
                     .then(response => {
@@ -90,17 +93,17 @@ export default class PostFormComponent extends Component {
                     this.state.published,
                     this.state.postDate,
                     this.state.title,
-                    this.state.title2,
+                    // this.state.title2,
                     this.state.subtitle1,
                     this.state.description1,
-                    this.state.subtitle2,
-                    this.state.description2,
-                    this.state.subtitle3,
-                    this.state.description3,
+                    // this.state.subtitle2,
+                    // this.state.description2,
+                    // this.state.subtitle3,
+                    // this.state.description3,
                     this.state.quote1,
                     this.state.quoter1,
-                    this.state.quote2,
-                    this.state.quoter2,
+                    // this.state.quote2,
+                    // this.state.quoter2,
                     this.state.category
                 )
                     .then(response => {
@@ -186,18 +189,18 @@ export default class PostFormComponent extends Component {
                                 />
                             </Form.Group>
                         </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="title2">
-                                <Form.Label>Title 2</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Title 2 of Post"
-                                    value={this.state.title2}
-                                    name='title2'
-                                    onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="title2">*/}
+                        {/*        <Form.Label>Title 2</Form.Label>*/}
+                        {/*        <Form.Control*/}
+                        {/*            type="text"*/}
+                        {/*            placeholder="Title 2 of Post"*/}
+                        {/*            value={this.state.title2}*/}
+                        {/*            name='title2'*/}
+                        {/*            onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
                         <Form.Row>
                             <Form.Group as={Col} controlId="subtitle1">
                                 <Form.Label>Subtitle 1</Form.Label>
@@ -224,54 +227,54 @@ export default class PostFormComponent extends Component {
                                 />
                             </Form.Group>
                         </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="subtitle2">
-                                <Form.Label>Subtitle 2</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Subtitle 2 of Post"
-                                    value={this.state.subtitle2}
-                                    name='subtitle2'
-                                    onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="description2">
-                                <Form.Label>Description 2</Form.Label>
-                                <Form.Control as="textarea" rows="3"
-                                              type="text"
-                                              placeholder="Description 2 of Post"
-                                              value={this.state.description2}
-                                              name='description2'
-                                              onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="subtitle3">
-                                <Form.Label>Subtitle 3</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Subtitle 3 of Post"
-                                    value={this.state.subtitle3}
-                                    name='subtitle3'
-                                    onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="description3">
-                                <Form.Label>Description 3</Form.Label>
-                                <Form.Control as="textarea" rows="3"
-                                              type="text"
-                                              placeholder="Description 3 of Post"
-                                              value={this.state.description3}
-                                              name='description3'
-                                              onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="subtitle2">*/}
+                        {/*        <Form.Label>Subtitle 2</Form.Label>*/}
+                        {/*        <Form.Control*/}
+                        {/*            type="text"*/}
+                        {/*            placeholder="Subtitle 2 of Post"*/}
+                        {/*            value={this.state.subtitle2}*/}
+                        {/*            name='subtitle2'*/}
+                        {/*            onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="description2">*/}
+                        {/*        <Form.Label>Description 2</Form.Label>*/}
+                        {/*        <Form.Control as="textarea" rows="3"*/}
+                        {/*                      type="text"*/}
+                        {/*                      placeholder="Description 2 of Post"*/}
+                        {/*                      value={this.state.description2}*/}
+                        {/*                      name='description2'*/}
+                        {/*                      onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="subtitle3">*/}
+                        {/*        <Form.Label>Subtitle 3</Form.Label>*/}
+                        {/*        <Form.Control*/}
+                        {/*            type="text"*/}
+                        {/*            placeholder="Subtitle 3 of Post"*/}
+                        {/*            value={this.state.subtitle3}*/}
+                        {/*            name='subtitle3'*/}
+                        {/*            onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="description3">*/}
+                        {/*        <Form.Label>Description 3</Form.Label>*/}
+                        {/*        <Form.Control as="textarea" rows="3"*/}
+                        {/*                      type="text"*/}
+                        {/*                      placeholder="Description 3 of Post"*/}
+                        {/*                      value={this.state.description3}*/}
+                        {/*                      name='description3'*/}
+                        {/*                      onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
                         <Form.Row>
                             <Form.Group as={Col} controlId="quote1">
                                 <Form.Label>Quote 1</Form.Label>
@@ -296,30 +299,30 @@ export default class PostFormComponent extends Component {
                                 />
                             </Form.Group>
                         </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="quote2">
-                                <Form.Label>Quote 2</Form.Label>
-                                <Form.Control as="textarea" rows="3"
-                                              type="text"
-                                              placeholder="Quote 2 of Post"
-                                              value={this.state.quote2}
-                                              name='quote2'
-                                              onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="quoter2">
-                                <Form.Label>Quoter 2</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Quoter of Quote 2"
-                                    value={this.state.quoter2}
-                                    name='quoter2'
-                                    onChange={this.onChangeField}
-                                />
-                            </Form.Group>
-                        </Form.Row>
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="quote2">*/}
+                        {/*        <Form.Label>Quote 2</Form.Label>*/}
+                        {/*        <Form.Control as="textarea" rows="3"*/}
+                        {/*                      type="text"*/}
+                        {/*                      placeholder="Quote 2 of Post"*/}
+                        {/*                      value={this.state.quote2}*/}
+                        {/*                      name='quote2'*/}
+                        {/*                      onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
+                        {/*<Form.Row>*/}
+                        {/*    <Form.Group as={Col} controlId="quoter2">*/}
+                        {/*        <Form.Label>Quoter 2</Form.Label>*/}
+                        {/*        <Form.Control*/}
+                        {/*            type="text"*/}
+                        {/*            placeholder="Quoter of Quote 2"*/}
+                        {/*            value={this.state.quoter2}*/}
+                        {/*            name='quoter2'*/}
+                        {/*            onChange={this.onChangeField}*/}
+                        {/*        />*/}
+                        {/*    </Form.Group>*/}
+                        {/*</Form.Row>*/}
                         <Form.Row>
                             <Form.Group as={Col} controlId="category">
                                 <Form.Label>Category</Form.Label>

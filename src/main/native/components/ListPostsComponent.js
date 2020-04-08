@@ -32,14 +32,17 @@ export default class ListPostsComponent extends React.Component {
         fetch('http://localhost:8080/api/posts/published')
             .then((response) => response.json())
             .then((json) => this.setState({posts: json}))
-            .catch((error) => console.error(error))
+            .catch((error) => this.setState({message: error.message}))
             .finally(() => this.setState({isLoading: false}));
     }
 
     makePostsList () {
+        if (this.state.message) {
+            return <View style={"margin-top: 10px;"}><Text>{this.state.message}</Text></View>
+        }
         return this.state.posts.map((data) => {
             return (
-                <View key={data._id} style={"marginTop:"}><Text>{data.title}</Text></View>
+                <View key={data._id} style={{marginTop: 10}}><Text>{data.title}</Text></View>
             )
         })
     }

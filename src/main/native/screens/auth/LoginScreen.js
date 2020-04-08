@@ -23,9 +23,9 @@ export default class Home extends React.Component {
                     <View style={DefaultStyles.body}>
                         <View style={DefaultStyles.sectionContainer}>
                             <Text style={DefaultStyles.sectionTitle}>React Blog</Text>
-                            <Text style={DefaultStyles.sectionDescription, {textAlign: "center", marginTop: 10}}>
-                                Login Page
-                            </Text>
+                            {/*<Text style={DefaultStyles.sectionDescription, {textAlign: "center", marginTop: 10}}>*/}
+                            {/*    Login Page*/}
+                            {/*</Text>*/}
                             <Icon style={{textAlign: 'center'}} name="person" size={50}/>
                         </View>
                     </View>

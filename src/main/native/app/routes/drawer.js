@@ -23,10 +23,10 @@ export function AuthDrawer({navigation}) {
 
 const Stack = createStackNavigator();
 
-function LogoutStack() {
+function LogoutStack({navigation}) {
     return (
     <Stack.Navigator initialRouteName="Logout" options={{headerStyle, headerTitleStyle}}>
-        <Stack.Screen name="Logout" component={Logout}/>
+        <Stack.Screen name="Logout" component={Logout} options={{headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />}}/>
     </Stack.Navigator>
     )
 }

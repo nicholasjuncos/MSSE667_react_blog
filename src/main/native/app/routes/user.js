@@ -8,13 +8,15 @@ import UpdateProfileScreen from "../scenes/user/UpdateProfile";
 import {headerStyle, headerTitleStyle} from '../theme'
 import {NavigationDrawerStructure} from "../components/Shared";
 import HomeStack from "./home";
+import {useAuth} from "../provider";
 
 const Stack = createStackNavigator();
 
 export function UserStack({navigation}) {
+    const { state } = useAuth();
     return (
         <Stack.Navigator initialRouteName="Home" options={{headerStyle, headerTitleStyle}}>
-            <Stack.Screen name="MyProfile" component={ProfileScreen} options={{headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />}}/>
+            <Stack.Screen name="Profile" component={ProfileScreen} options={{headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />}}/>
             <Stack.Screen name="UpdateProfile" component={UpdateProfileScreen} options={{headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />}}/>
         </Stack.Navigator>
     )

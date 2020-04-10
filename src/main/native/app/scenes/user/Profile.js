@@ -10,23 +10,14 @@ import {ErrorText, Header} from "../../components/Shared";
 
 export default function Profile (props) {
     const {navigation} = props;
-
-    const { state } = useAuth();
-    const user = state.user;
-
-    let pageProps = {title: props.route.name === 'MyProfile' ? 'My Profile': `${user.username}'s Profile`};
+    let user = props.route.params === undefined ? useAuth().state.user : '';
+    let pageProps = {title: props.route.params === undefined ? 'My Profile': `${user.username}'s Profile`};
     return (
         <View style={{flex: 1, paddingHorizontal: 16, backgroundColor:"#fff"}}>
             <Header title={pageProps.title}/>
             <View style={{flex: 1}}>
-
+                <Text>{`Welcome ${user.firstName} ${user.lastName} (${user.username})`}</Text>
             </View>
         </View>
-        // <View style={{flex:1, paddingHorizontal: 16}}>
-        //     <View style={{flex:1}}>
-        //         <Text>{pageProps.title}</Text>
-        //         <Text>{user.firstName}</Text>
-        //     </View>
-        // </View>
     );
 };

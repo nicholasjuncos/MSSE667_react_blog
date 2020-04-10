@@ -1,7 +1,8 @@
 import {SafeAreaView, ScrollView, Button, Text, View} from "react-native";
 import React from 'react';
-import {DefaultStyles} from "../assets/Stylings";
-import ListPostsComponent from "../components/ListPostsComponent";
+import {DefaultStyles} from "../../assets/Stylings";
+import ListPostsComponent from "../../components/ListPostsComponent";
+import {Header} from "../../components/Shared";
 
 export default class Home extends React.Component {
     render() {
@@ -12,15 +13,11 @@ export default class Home extends React.Component {
                     style={DefaultStyles.scrollView}>
                     <View style={DefaultStyles.body}>
                         <View style={DefaultStyles.sectionContainer}>
-                            <Text style={DefaultStyles.sectionTitle}>React Blog</Text>
+                            <Header title={"React Blog"}/>
                             <Text style={DefaultStyles.sectionDescription}>
-                                This is the HomePage for the Native App
+                                Welcome to React Blog!
                             </Text>
                             <ListPostsComponent/>
-                            {/*<Button*/}
-                            {/*    title="Go to Jane's profile"*/}
-                            {/*    onPress={() => navigation.navigate('Profile', {name: 'Jane'})}*/}
-                            {/*/>*/}
                         </View>
                     </View>
                 </ScrollView>

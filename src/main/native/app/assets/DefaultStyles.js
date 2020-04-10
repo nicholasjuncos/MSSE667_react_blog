@@ -39,4 +39,9 @@ export default StyleSheet.create({
         paddingRight: 12,
         textAlign: 'right',
     },
+    fullCenterView: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 });

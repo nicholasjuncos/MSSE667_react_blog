@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
 import {DefaultStyles} from "../assets/Stylings";
 
@@ -8,7 +8,8 @@ export default class ListPostsComponent extends React.Component {
         this.state = {
             posts: [],
             isLoading: true,
-            title: props.title ? props.title : 'Published Posts'
+            title: props.title ? props.title : 'Published Posts',
+            author: props.username ? props.username : undefined
         };
         this.getPosts = this.getPosts.bind(this);
         this.makePostsList = this.makePostsList.bind(this);

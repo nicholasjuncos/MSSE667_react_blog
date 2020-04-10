@@ -39,7 +39,7 @@ export default class ListPostsComponent extends React.Component {
 
     makePostsList () {
         if (this.state.message) {
-            return <View style={"margin-top: 10px;"}><Text>{this.state.message}</Text></View>
+            return <View style={{marginTop: 10}}><Text>{this.state.message}</Text></View>
         }
         return this.state.posts.map((data) => {
             return (

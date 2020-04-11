@@ -53,21 +53,33 @@ export async function updatePassword(data) {
 
 export async function updateInfo(userId, data) {
     try {
-        const options = {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "multipart/form-data"
-            }
-        };
+        let token = await AsyncStorage.getItem(TOKEN_KEY);
 
-        const form_data = new FormData();
-        for (let key in data)
-            form_data.append(key, data[key]);
+        try {
+            const options = {
+                headers: {
+                    "Content-type": "application/json",
+                    "Authorization": 'Bearer ' + token
+                }
+            };
 
-        let res = await axios.put(`${c.UPDATE_INFO}`, form_data, options);
-        return res.data;
+            let res = await axios.put(`${c.UPDATE_INFO}`, data, options);
+            return res.data;
+        } catch (e) {
+            return new Error(e)
+        }
     } catch (e) {
         throw handler(e);
+    }
+}
+
+export async function getUser(username) {
+    try {
+        const detailURL = c.GET_USER + username;
+        let res = await axios.get(detailURL);
+        return res.data;
+    } catch(e) {
+        throw handler(e)
     }
 }
 

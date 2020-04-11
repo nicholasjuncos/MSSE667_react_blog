@@ -9,6 +9,6 @@ interface UserService {
     User findByUsername(String username);
     User findBy_id(String _id);
     User delete(String username);
-    User updateInfo(User user, String username);
+    User updateInfo(String firstName, String lastName, String username);
     User updatePassword(User user, String username);
 }

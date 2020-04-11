@@ -17,7 +17,7 @@ export default class Home extends React.Component {
                             <Text style={DefaultStyles.sectionDescription}>
                                 Welcome to React Blog!
                             </Text>
-                            <ListPostsComponent/>
+                            <ListPostsComponent navigation={this.props.navigation}/>
                         </View>
                     </View>
                 </ScrollView>

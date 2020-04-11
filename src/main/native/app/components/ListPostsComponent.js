@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, FlatList, Text, View } from 'react-native';
+import {ActivityIndicator, FlatList, Text, TouchableOpacity, View} from 'react-native';
 import {DefaultStyles} from "../assets/Stylings";
 
 export default class ListPostsComponent extends React.Component {
@@ -43,7 +43,11 @@ export default class ListPostsComponent extends React.Component {
         }
         return this.state.posts.map((data) => {
             return (
-                <View key={data._id} style={{marginTop: 10}}><Text>{data.title}</Text></View>
+                <View key={data._id} style={{marginTop: 10}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Profile', {username: data.author.username})}>
+                        <Text>{data.title}</Text>
+                    </TouchableOpacity>
+                </View>
             )
         })
     }

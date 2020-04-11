@@ -1,6 +1,7 @@
 package com.react_blog.controllers;
 
 import com.react_blog.models.User;
+import com.react_blog.payload.request.UserRequest;
 import com.react_blog.repositories.UserRepository;
 import com.react_blog.security.jwt.JwtUtils;
 import com.react_blog.services.user.MongoUserService;
@@ -54,9 +55,9 @@ public class UserController {
 
     @PutMapping("/update/info/")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-    public ResponseEntity<?> updateUserInfo(@RequestHeader Map<String, String> headers, @RequestBody @Valid User user) {
+    public ResponseEntity<?> updateUserInfo(@RequestHeader Map<String, String> headers, @RequestBody @Valid UserRequest userRequest) {
         String username = jwtUtils.getLoggedInUser(headers);
-        return ResponseEntity.ok(service.updateInfo(user, username));
+        return ResponseEntity.ok(service.updateInfo(userRequest.getFirstName(), userRequest.getLastName(), username));
     }
 
     @PutMapping("/update/password/")

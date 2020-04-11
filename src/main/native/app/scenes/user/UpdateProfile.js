@@ -18,8 +18,7 @@ export default function UpdateProfile (props) {
 
     const fields = [
         {name: 'firstName', label: 'First Name', required: true, value:state.user.firstName},
-        {name: 'lastName', label: 'Last Name', required: true, value:state.user.lastName},
-        {name: 'username', label: 'Username', required: true, value:state.user.username}
+        {name: 'lastName', label: 'Last Name', required: true, value:state.user.lastName}
     ];
 
     async function onSubmit(data) {
@@ -27,18 +26,18 @@ export default function UpdateProfile (props) {
 
         try {
             let response = await api.updateInfo(state.user._id, data);
-            updateUser(response.user);
+            updateUser(response);
 
             setLoading(false);
 
-            navigation.goBack();
+            navigation.navigate('MyProfile');
         } catch (error) {
             setError(error.message);
             setLoading(false)
         }
     }
 
-    let formProps = {title: "Submit", fields, onSubmit, loading };
+    let formProps = {title: "Submit", fields, initialData: {'firstName': state.user.firstName, 'lastName': state.user.lastName}, onSubmit, loading };
     return (
         <View style={{flex:1, paddingHorizontal: 16}}>
             <View style={{flex:1}}>

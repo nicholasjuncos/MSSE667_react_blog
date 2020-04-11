@@ -47,9 +47,9 @@ public class MongoUserService implements UserService {
     }
 
     @Override
-    public User updateInfo(User user, String username) {
+    public User updateInfo(String firstName, String lastName, String username) {
         User updated = findUserByUsername(username);
-        updated.updateInfo(user.getFirstName(), user.getLastName());
+        updated.updateInfo(firstName, lastName);
         updated = repository.save(updated);
         return updated;
     }

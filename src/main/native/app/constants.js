@@ -11,5 +11,5 @@ export const UPDATE_PASSWORD = `${API_URL}/users/update/password/`;
 export const GET_USER = `${API_URL}/users/username=`;
 export const POSTS_BASE = `${API_URL}/posts/`;
 export const POSTS_PUBLISHED = `${API_URL}/posts/published`;
-export const POSTS_AUTHOR_PUBLISHED = `${API_URL}/posts/?author_username=`;
+export const POSTS_AUTHOR_PUBLISHED = `${API_URL}/posts/author_username=`;
 export const MY_POSTS = `${API_URL}/posts/my/posts/`;

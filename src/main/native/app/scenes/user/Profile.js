@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, Button, Text, TouchableOpacity, View} from 'react-native';
+import {ActivityIndicator, Button, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 
 import * as api from "../../services/auth";
 import {AuthContext, useAuth} from "../../provider";
 
 import {getUser} from "../../services/auth";
 import {ErrorText, Header} from "../../components/Shared";
+import {DefaultStyles} from "../../assets/Stylings";
+import ListPostsComponent from "../../components/ListPostsComponent";
+import {getAuthorPublishedPosts} from "../../services/post";
 
 export default function Profile(props) {
     const {navigation} = props;
@@ -50,19 +53,31 @@ export default function Profile(props) {
             <ActivityIndicator/>
         )
         : (
-            <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: "#fff"}}>
+            <ScrollView>
                 <Header title={pageProps.title}/>
                 <View style={{flex: 1}}>
                     {isUser ? (
                         <>
-                            <Text>{`Welcome to ${state.user.firstName} ${state.user.lastName} (${state.user.username}) profile`}</Text>
-                            <Button title={"Update Profile"} onPress={() => navigation.navigate('UpdateProfile')}/>
+                            <View style={DefaultStyles.sectionContainer}>
+                                <Text>{`Welcome to ${state.user.firstName} ${state.user.lastName} (${state.user.username}) profile`}</Text>
+                                <Button title={"Update Profile"} onPress={() => navigation.navigate('UpdateProfile')}/>
+                            </View>
+                            <View style={DefaultStyles.sectionContainer}>
+                                <ListPostsComponent navigation={navigation} isUser={true}/>
+                            </View>
                         </>
                     ) : (
-                        <Text>{`Welcome to ${user.firstName} ${user.lastName} (${user.username}) profile`}</Text>
+                        <>
+                        <View style={DefaultStyles.sectionContainer}>
+                            <Text>{`Welcome to ${user.firstName} ${user.lastName} (${user.username}) profile`}</Text>
+                        </View>
+                        <View style={DefaultStyles.sectionContainer}>
+                            <ListPostsComponent navigation={navigation} username={user.username}/>
+                        </View>
+                        </>
                     )
                     }
                 </View>
-            </View>
+            </ScrollView>
         );
 };

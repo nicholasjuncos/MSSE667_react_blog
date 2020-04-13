@@ -13,7 +13,7 @@ export default function Router(props) {
         <>
         {state.isLoggedIn ?
             <NavigationContainer>
-                <NormalDrawer/>
+                <NormalDrawer state={state}/>
             </NavigationContainer>
             :
             <NavigationContainer>

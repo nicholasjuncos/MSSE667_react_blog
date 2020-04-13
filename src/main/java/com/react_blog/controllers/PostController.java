@@ -55,7 +55,7 @@ public class PostController {
         return ResponseEntity.ok(service.findBy_idAndPublishedIsTrueAndPostDateLessThanEqual(post_id));
     }
 
-    @GetMapping("/?author_username={username}")
+    @GetMapping("/author_username={username}")
     public ResponseEntity<?> findAuthorsPublishedPosts(@PathVariable("username") String username) {
         return ResponseEntity.ok(service.findByPublishedIsTrueAndPostDateLessThanEqualAndAuthorUsername(username));
     }

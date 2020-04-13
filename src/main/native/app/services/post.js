@@ -67,9 +67,8 @@ export async function getMyPosts() {
         try {
             const options = {
                 headers: {
-                    Accept: "application/json",
-                    "Content-Type": "multipart/form-data",
-                    "Authorization": token
+                    "Content-type": "application/json",
+                    "Authorization": 'Bearer ' + token
                 }
             };
 
@@ -129,26 +128,6 @@ export async function deletePost(postId) {
         } catch (e) {
             return new Error(e)
         }
-    } catch (e) {
-        throw handler(e);
-    }
-}
-
-export async function updateInfo(userId, data) {
-    try {
-        const options = {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "multipart/form-data"
-            }
-        };
-
-        const form_data = new FormData();
-        for (let key in data)
-            form_data.append(key, data[key]);
-
-        let res = await axios.put(`${c.UPDATE_INFO}`, form_data, options);
-        return res.data;
     } catch (e) {
         throw handler(e);
     }

@@ -1,14 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, Button, ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {ActivityIndicator, Button, ScrollView, Text, View} from 'react-native';
 
-import * as api from "../../services/auth";
-import {AuthContext, useAuth} from "../../provider";
-
+import {useAuth} from "../../provider";
 import {getUser} from "../../services/auth";
-import {ErrorText, Header} from "../../components/Shared";
+import {Header} from "../../components/Shared";
 import {DefaultStyles} from "../../assets/Stylings";
 import ListPostsComponent from "../../components/ListPostsComponent";
-import {getAuthorPublishedPosts} from "../../services/post";
 
 export default function Profile(props) {
     const {navigation} = props;
@@ -53,7 +50,9 @@ export default function Profile(props) {
             <ActivityIndicator/>
         )
         : (
-            <ScrollView>
+            <ScrollView
+                contentInsetAdjustmentBehavior="automatic"
+                style={DefaultStyles.scrollView}>
                 <Header title={pageProps.title}/>
                 <View style={{flex: 1}}>
                     {isUser ? (

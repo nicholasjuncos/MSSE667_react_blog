@@ -83,6 +83,29 @@ export async function getMyPosts() {
     }
 }
 
+export async function getMyPostDetail(postId) {
+    try {
+        let token = await AsyncStorage.getItem(TOKEN_KEY);
+
+        try {
+            const options = {
+                headers: {
+                    "Content-type": "application/json",
+                    "Authorization": 'Bearer ' + token
+                }
+            };
+
+
+            let res = await axios.get(`${c.MY_POSTS}${postId}`, options);
+            return res.data;
+        } catch (e) {
+            return new Error(e)
+        }
+    } catch (e) {
+        throw handler(e);
+    }
+}
+
 export async function updatePost(postId, data) {
     try {
         let token = await AsyncStorage.getItem(TOKEN_KEY);

@@ -5,8 +5,6 @@ import React from "react";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import AuthStack from "./auth";
 import {UserStack} from "./user";
-import {Button} from "react-native";
-import {useAuth} from "../provider";
 import Logout from "../scenes/auth/Logout";
 import {createStackNavigator} from "@react-navigation/stack";
 

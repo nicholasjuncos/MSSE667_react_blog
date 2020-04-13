@@ -1,8 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, Button, FlatList, Text, TouchableOpacity, View} from 'react-native';
-import {DefaultStyles} from "../assets/Stylings";
-import {useAuth} from "../provider";
-import {getUser} from "../services/auth";
+import {ActivityIndicator, Text, TouchableOpacity, View} from 'react-native';
 import {getPublishedPosts, getMyPosts, getAuthorPublishedPosts} from "../services/post";
 import {Header} from "./Shared";
 
@@ -15,26 +12,31 @@ export default function ListPostsComponent(props) {
     const [pageProps, setPageProps] = useState({title: 'Posts'});
     const [message, setMessage] = useState();
 
-    function makePostsList () {
+    function makePostsList() {
         if (message) {
             return <View style={{marginTop: 10}}><Text>{message}</Text></View>
         }
         return posts.map((data) => {
             return (
                 <View key={data._id} style={{marginTop: 10}}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Profile', {username: data.author.username})}>
-                        <Text>{data.title}</Text>
-                    </TouchableOpacity>
+                    {isUser ? (
+                            <TouchableOpacity onPress={() => navigation.navigate('MyPostDetails', {postId: data._id})}>
+                                <Text>{data.title}</Text>
+                            </TouchableOpacity>
+                        )
+                        : (
+                            <TouchableOpacity onPress={() => navigation.navigate('PostDetails', {postId: data._id})}>
+                                <Text>{data.title}</Text>
+                            </TouchableOpacity>
+                        )
+                    }
                 </View>
             )
         })
     }
 
     useEffect(() => {
-        if(props.posts) {
-            setPosts(props.posts);
-            setIsLoading(false);
-        }else if(props.isUser) {
+        if (props.isUser) {
             setPageProps({title: 'My Posts'});
             setIsUser(true);
             getMyPosts().then(

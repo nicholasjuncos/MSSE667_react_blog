@@ -3,7 +3,8 @@ import DefaultColors from "./DefaultColors";
 
 export default StyleSheet.create({
     scrollView: {
-        backgroundColor: DefaultColors.lighter,
+        backgroundColor: DefaultColors.white,
+        paddingHorizontal: 16
     },
     engine: {
         position: 'absolute',
@@ -43,5 +44,8 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    link: {
+        color: "blue"
     }
 });

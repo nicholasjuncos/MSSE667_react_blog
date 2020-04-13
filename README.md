@@ -1,4 +1,4 @@
-# MSSE 667 Group Project
+# MSSE 667 Solo Blog Project
 
 This is a Spring-boot, MongoDB, React, React-Native project that pulls from a mongodb database on Blog Posts. You can 
 signup, login, create, update, read, and delete your posts, and view other published posts.

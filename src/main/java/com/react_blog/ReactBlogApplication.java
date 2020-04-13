@@ -45,7 +45,7 @@ public class ReactBlogApplication implements CommandLineRunner {
 			roleRepository.save(new Role(ERole.ROLE_MODERATOR));
 			roleRepository.save(new Role(ERole.ROLE_ADMIN));
 		}
-		if(!userRepository.existsByUsername("testman")) {
+		if(!userRepository.existsByUsername("Testman")) {
 			Set<Role> roles = new HashSet<>();
 			Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
@@ -56,13 +56,13 @@ public class ReactBlogApplication implements CommandLineRunner {
 			Role userRole = roleRepository.findByName(ERole.ROLE_USER)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
-			User testman = new User("Test", "Man", "testman", "testman@test.com", encoder.encode("Testman1234"));
+			User testman = new User("Test", "Man", "Testman", "Testman@test.com", encoder.encode("Testman1234"));
 			testman.setRoles(roles);
 			userRepository.save(testman);
 			createPosts(testman);
 		} else {
 			if(postRepository.count() == 0) {
-				User testman = userRepository.findByUsername("testman").orElseThrow(() -> new RuntimeException("Error: User is not found."));
+				User testman = userRepository.findByUsername("Testman").orElseThrow(() -> new RuntimeException("Error: User is not found."));
 				createPosts(testman);
 			}
 		}

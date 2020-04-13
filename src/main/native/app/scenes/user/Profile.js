@@ -6,11 +6,13 @@ import {getUser} from "../../services/auth";
 import {Header} from "../../components/Shared";
 import {DefaultStyles} from "../../assets/Stylings";
 import ListPostsComponent from "../../components/ListPostsComponent";
+import {getMyPosts} from "../../services/post";
 
 export default function Profile(props) {
     const {navigation} = props;
     const [isLoading, setIsLoading] = useState(true);
     const [username, setUsername] = useState("");
+    const [posts, setPosts] = useState();
     const [user, setUser] = useState();
     const [isUser, setIsUser] = useState(false);
     const [pageProps, setPageProps] = useState({title: 'Profile'});
@@ -25,6 +27,14 @@ export default function Profile(props) {
             setUser(user);
             setIsUser(true);
             let pageProps = {title: 'My Profile'};
+            getMyPosts().then(
+                res => {
+                    setPosts(<ListPostsComponent navigation={navigation} isUser={true} posts={res}/>);
+                    setIsLoading(false);
+                }, error => {
+                    setIsLoading(false);
+                }
+            );
             setPageProps(pageProps);
             setIsLoading(false);
         } else {
@@ -37,12 +47,14 @@ export default function Profile(props) {
             setUsername(username);
             const pageProps = {title: `${username}'s Profile`};
             setPageProps(pageProps);
+            setPosts(<ListPostsComponent navigation={navigation} username={username}/>);
             getUser(username).then(
                 res => {
                     setUser(res);
                     setIsLoading(false);
                 }
             );
+
         }
     }, []);
 
@@ -59,10 +71,11 @@ export default function Profile(props) {
                         <>
                             <View style={DefaultStyles.sectionContainer}>
                                 <Text>{`Welcome to ${state.user.firstName} ${state.user.lastName} (${state.user.username}) profile`}</Text>
+                                <Button title={"Create New Post"} onPress={() => navigation.navigate('CreatePost')}/>
                                 <Button title={"Update Profile"} onPress={() => navigation.navigate('UpdateProfile')}/>
                             </View>
                             <View style={DefaultStyles.sectionContainer}>
-                                <ListPostsComponent navigation={navigation} isUser={true}/>
+                                {posts}
                             </View>
                         </>
                     ) : (
@@ -71,7 +84,7 @@ export default function Profile(props) {
                             <Text>{`Welcome to ${user.firstName} ${user.lastName} (${user.username}) profile`}</Text>
                         </View>
                         <View style={DefaultStyles.sectionContainer}>
-                            <ListPostsComponent navigation={navigation} username={user.username}/>
+                            {posts}
                         </View>
                         </>
                     )

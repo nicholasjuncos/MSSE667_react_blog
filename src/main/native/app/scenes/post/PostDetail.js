@@ -29,7 +29,7 @@ export default function PostDetail(props) {
                         setAuthor(res.author);
                         setIsLoading(false);
                     }, error => {
-                        Alert(error.message);
+                        Alert.alert(error.message);
                         navigation.navigate('Home');
                 }
                 )
@@ -58,9 +58,10 @@ export default function PostDetail(props) {
                 contentInsetAdjustmentBehavior="automatic"
                 style={DefaultStyles.scrollView}>
                 <Header title={title}/>
+                <Text>Category: {post.category ? post.category : 'None'}</Text>
                 <View style={{flex: 1}}>
                     {isUser ? <Text>{post.published ? 'Published' : 'Not Published'}</Text> : undefined}
-                    {/*{isUser ? <Button onPress={() => navigation.navigate('UpdatePost', {postId: post._id})} title={"Update"}/> : undefined}*/}
+                    {isUser ? <Button onPress={() => navigation.navigate('UpdatePost', {postId: post._id})} title={"Update"}/> : undefined}
                     <View style={DefaultStyles.sectionContainer}>
                         <Text style={DefaultStyles.sectionTitle}>{post.title}</Text>
                         <TouchableOpacity onPress={() => navigation.navigate('Profile', {username: author.username})}>

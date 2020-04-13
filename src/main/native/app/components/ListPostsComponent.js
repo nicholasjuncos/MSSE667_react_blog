@@ -21,12 +21,12 @@ export default function ListPostsComponent(props) {
                 <View key={data._id} style={{marginTop: 10}}>
                     {isUser ? (
                             <TouchableOpacity onPress={() => navigation.navigate('MyPostDetails', {postId: data._id})}>
-                                <Text>{data.title}</Text>
+                                <Text style={{color: 'blue'}}>{data.title} on {data.postDate}</Text>
                             </TouchableOpacity>
                         )
                         : (
                             <TouchableOpacity onPress={() => navigation.navigate('PostDetails', {postId: data._id})}>
-                                <Text>{data.title}</Text>
+                                <Text style={{color: 'blue'}}>{data.title} on {data.postDate} by {data.author.username}</Text>
                             </TouchableOpacity>
                         )
                     }
@@ -36,6 +36,39 @@ export default function ListPostsComponent(props) {
     }
 
     useEffect(() => {
+        const getPosts = navigation.addListener('focus', payload => {
+            if (props.isUser) {
+                getMyPosts().then(
+                    res => {
+                        setPosts(res);
+                        setIsLoading(false);
+                    }, error => {
+                        setMessage(error.message);
+                        setIsLoading(false);
+                    }
+                )
+            } else if (props.username) {
+                getAuthorPublishedPosts(props.username).then(
+                    res => {
+                        setPosts(res);
+                        setIsLoading(false);
+                    }, error => {
+                        setMessage(error.message);
+                        setIsLoading(false);
+                    }
+                )
+            } else {
+                getPublishedPosts().then(
+                    res => {
+                        setPosts(res);
+                        setIsLoading(false);
+                    }, error => {
+                        setMessage(error.message);
+                        setIsLoading(false);
+                    }
+                )
+            }
+        });
         if (props.isUser) {
             setPageProps({title: 'My Posts'});
             setIsUser(true);
@@ -72,6 +105,7 @@ export default function ListPostsComponent(props) {
                 }
             )
         }
+        return getPosts;
     }, []);
 
 

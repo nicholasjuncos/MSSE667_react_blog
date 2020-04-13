@@ -11,17 +11,12 @@ export async function createPost(data) {
         try {
             const options = {
                 headers: {
-                    Accept: "application/json",
-                    "Content-Type": "multipart/form-data",
-                    "Authorization": token
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + token
                 }
             };
 
-            const form_data = new FormData();
-            for (let key in data)
-                form_data.append(key, data[key]);
-
-            let res = await axios.post(`${c.POSTS_BASE}`, form_data, options);
+            let res = await axios.post(`${c.POSTS_BASE}`, data, options);
             return res.data;
         } catch (e) {
             return new Error(e)
@@ -113,17 +108,12 @@ export async function updatePost(postId, data) {
         try {
             const options = {
                 headers: {
-                    Accept: "application/json",
-                    "Content-Type": "multipart/form-data",
-                    "Authorization": token
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + token
                 }
             };
-
-            const form_data = new FormData();
-            for (let key in data)
-                form_data.append(key, data[key]);
             const detailURL = c.MY_POSTS + postId;
-            let res = await axios.put(`${detailURL}`, form_data, options);
+            let res = await axios.put(`${detailURL}`, data, options);
             return res.data;
         } catch (e) {
             return new Error(e)
@@ -140,9 +130,8 @@ export async function deletePost(postId) {
         try {
             const options = {
                 headers: {
-                    Accept: "application/json",
-                    "Content-Type": "multipart/form-data",
-                    "Authorization": token
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + token
                 }
             };
             const detailURL = c.MY_POSTS + postId;

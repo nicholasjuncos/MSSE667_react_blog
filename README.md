@@ -29,6 +29,13 @@ npm start
 ### Native/React-Native
 Navigate to the native folder where the React-Native project is stored, install the node_modules, then start the project
  on your preferred emulator:
+ 
+ Test Username and password (CASE SENSITIVE!, USERNAME AND PASSWORD START WITH CAPITALIZED "T":
+ 
+ Username: *Testman*
+ 
+ Password: *Testman1234*
+ 
 ```bash
 cd src/main/native
 npm install
